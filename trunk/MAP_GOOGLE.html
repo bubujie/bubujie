@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=GB2312"/>
+    <style type="text/css">
+    v\:* {
+      behavior:url(#default#VML);
+    }
+    </style>
+    <title>Google Maps JavaScript API范例4：事件监视器</title>
+    <script charset="utf-8" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA7nPTPXCvzWYxyKdmbFQfTxRfh1ef-GeSz5gtCVpCKOPebNr1YhR23M_jRfeqAugNMsW3pZQJAwfCFw"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+
+	function load()
+	{
+		var map = new GMap2(document.getElementById("map"));
+		GEvent.addListener(map, "moveend", function()
+		{
+			var center = map.getCenter();
+			document.getElementById("message").innerHTML = center.toString();
+		});
+		map.setCenter(new GLatLng(38.481275996947815, 106.23950958251953),13);
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    <div id="map" style="width: 600px; height: 400px"></div>
+<div id="message"></div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>  
+    <title>Mapbar µØÍ¼ JavaScript API Ê¾Àý</title>  
+    <script type="text/javascript" src="http://union.mapbar.com/apis/maps/free?f=mapi&v=31  
+                                        &k=aCW9cItqL6d6dy4ndRE8ahggLhNqbX1hMec5MzThMHTsMRP  
+                                        sMBEeTemfZHT=@hC1TcM6bhXhcTtIz16sdc98WeNgMhftW6TLX   
+                                        tMyhg6y1LMb1td89ghtTd8LatgZFID="></script>  
+    <script type="text/javascript">  
+        var maplet = null;   
+        function initMap(){   
+            maplet = new Maplet("mapbar");   
+            maplet.centerAndZoom(new MPoint(106.23226,38.48341), 10);   
+            maplet.addControl(new MStandardControl());   
+        }   
+    </script>  
+</head>  
+  
+<body onload="initMap()">  
+<div id="mapbar" style="width:750px;height:500px"></div>
+</body>  
+</html>  
