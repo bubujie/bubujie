@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body {
+	font-size : 12px;
+	line-height : 16px;
+	color : #999;
+	font-family : 宋体, Arial, Helvetica, sans-serif;
+	width : 980px;
+	margin-left : auto;
+	margin-right : auto;
+}
+a {
+	text-decoration : none;
+	color : #666;
+}
+li {
+	list-style : none;
+}
+ul {
+	margin : 0;
+	padding : 0;
+}
+img {
+	border : 0;
+	margin : 0;
+	padding : 0;
+}
+.clear {
+	clear : both;
+}
+/* 页面头部开始 */
+#bbj_top {
+	width : 980px;
+	height : 55px;
+	margin : 10px auto 0 auto;
+}
+#bbj_top #left {
+	float : left;
+	height : 55px;
+}
+#bbj_top #center {
+	float : left;
+	width : 530px;
+	height : 55px;
+}
+#bbj_top #right #link_top {
+	height : 20px;
+	padding-top : 15px;
+}
+#bbj_top #right #link_bottom {
+	height : 20px;
+}
+#bbj_top #right a {
+	display : inline-block;
+	background : url(top_link_bg.gif);
+	width : 62px;
+	height : 20px;
+	font-size : 12px;
+	line-height : 20px;
+	text-align : center;
+	color : #666;
+	text-decoration : none;
+}
+/* 页面头部结束 */
+/* 页面导航开始 */
+#bbj_nav {
+	height : 40px;
+	width : 980px;
+	margin : 0 auto;
+	font-size : 12px;
+	background : url(388.png) no-repeat 0 0;
+}
+#bbj_nav ul {
+	padding : 0;
+	margin : 0 auto;
+	height : 40px;
+	width : 792px;
+}
+#bbj_nav li {
+	float : left;
+	margin : 0;
+	padding : 0;
+	list-style : none;
+	height : 40px;
+}
+#bbj_nav li.l2 {
+	width : 86px;
+}
+#bbj_nav li.l3 {
+	width : 99px;
+}
+#bbj_nav li.l4 {
+	width : 112px;
+}
+#bbj_nav a {
+	display : block;
+	height : 40px;
+	padding : 0 0 0 15px;
+	text-decoration : none;
+}
+#bbj_nav b {
+	display : block;
+	height : 30px;
+	padding : 4px 30px 6px 15px;
+	line-height : 30px;
+	color : #fff;
+	cursor : pointer;
+}
+#bbj_nav a:hover, #nav li:hover a {
+	background : url(388on.gif) no-repeat 0 0;
+	display : block;
+	height : 40px;
+	padding : 0 0 0 15px;
+	text-decoration : none;
+}
+#bbj_nav a:hover b, #nav li:hover a b {
+	display : block;
+	height : 30px;
+	padding : 8px 30px 2px 15px;
+	line-height : 30px;
+	background : url(388on.gif) no-repeat 100% 0;
+	color : #369;
+}
+/* 页面导航结束 */
+/* 搜索框开始 */
+#bbj_sch {
+	width : 980px;
+	height : 40px;
+	margin : 0 auto;
+	background : url(388.png) repeat 0 100%;
+	clear : left;
+}
+#bbj_sch #sch_box {
+	text-align : right;
+	height : 25px;
+	padding-top : 5px;
+}
+#bbj_sch #sch_box form {
+	height : 25px;
+	margin : 0 100px 0 0;
+	padding : 0;
+}
+#bbj_sch #sch_box #key {
+	background-color : #e6f6fb;
+	font-weight : bold;
+	color : #8a2be2;
+}
+#bbj_sch #sch_box select, #bbj_sch #sch_box option {
+	background-color : #e6f6fb;
+}
+#bbj_sch #sch_box select, #bbj_sch #sch_box input, #bbj_sch #sch_box img {
+	vertical-align : middle;
+}
+/* 搜索框结束 */
+</style>
+<script language="JavaScript" type="text/javascript">
+			function dosearch(){
+				if (document.searchfrm.key.value=="输入关键字")
+					skkey="";
+				else
+					skkey=document.searchfrm.key.value
+				document.searchfrm.action="http://www.bubujie.com/goodslist.php?catid="+document.searchfrm.catid.value+"&key="+skkey;
+				document.searchfrm.submit();
+			}
+			function show_search(str){
+
+ 				if (str=="goods")
+				{   
+ 				//	var AX=document.all(hideme); //声明一个变量
+
+					document.all.name_cat.style.display="inline-block";
+					document.all.name_city.style.display="none";
+				}
+				else
+				{// alert("b");
+					document.all.name_cat.style.display="none";
+					document.all.name_city.style.display="inline-block";
+				}
+			
+			}
+</script>
+</head>
+<body>
+<!-- 页面头部开始 -->
+<div id="bbj_top">
+  <div id="left"><a href="http://www.bubujie.com/"><img src="logo.gif" title="步步街--银川网络商城" /></a></div>
+  <div id="center">
+    <!-- 头部中栏区域 -->
+  </div>
+  <div id="right">
+    <div id="link_top"> <a href="../user_register.php">免费注册</a> <a href="../tologin.php">买家登录</a> <a href="../offerlogin.php">商家登录</a> <a href="../bbs">互助社区</a> </div>
+    <div id="link_bottom">
+      <!-- 头部右栏下部 -->
+    </div>
+  </div>
+</div>
+<!-- 页面头部结束 -->
+<!-- 导航菜单开始 -->
+<div id="bbj_nav">
+  <ul>
+    <li class="l2"><a href="link.html"><b>首页</b></a></li>
+    <li class="l4"><a href="link.html"><b>数码产品</b></a></li>
+    <li class="l4"><a href="link.html"><b>居家日用</b></a></li>
+    <li class="l4"><a href="link.html"><b>书籍音像</b></a></li>
+    <li class="l2"><a href="link.html"><b>女人</b></a></li>
+    <li class="l2"><a href="link.html"><b>男人</b></a></li>
+    <li class="l2"><a href="link.html"><b>租赁</b></a></li>
+    <li class="l4"><a href="link.html"><b>餐饮娱乐</b></a></li>
+  </ul>
+</div>
+<!-- 导航菜单结束 -->
+<!-- 搜索框开始 -->
+<div id="bbj_sch">
+  <div id="sch_box">
+    <form name="searchfrm" action="http://www.bubujie.com/goodslist.php" method=""  target="_blank">
+      <select name="type" onchange="javascript:show_search(this.value);">
+        <option value="goods" selected="selected">&nbsp;搜商品</option>
+        <option value="shop">&nbsp;搜商铺</option>
+      </select>
+      <input name="key" id="key" type="text"  size="40" maxlength="50" onfocus="this.select()" onmouseover="this.focus()" value="" />
+      <select name="catid" size="1" id="name_cat" style="width:190px;display:inline-block;">
+        <option value="0" selected="selected">- --全部分类-- -</option>
+        <option value="1">&nbsp;电脑硬件/台式电脑/网络设备</option>
+        <option value="2">&nbsp;珠宝首饰/时尚饰品</option>
+        <option value="3">&nbsp;手机</option>
+        <option value="4">&nbsp;住宅/商铺/办公楼销售</option>
+        <option value="5">&nbsp;数码相机/摄像机/冲印</option>
+        <option value="6">&nbsp;随身视听/音箱/耳机</option>
+        <option value="7">&nbsp;运动/户外/休闲/健身</option>
+        <option value="8">&nbsp;户外/军品/旅游/机票</option>
+        <option value="9">&nbsp;邮币/古董/字画/收藏</option>
+        <option value="10">&nbsp;汽车/配件/改装/摩托/自行车</option>
+        <option value="11">&nbsp;动漫周边/游戏周边</option>
+        <option value="12">&nbsp;网络游戏虚拟商品</option>
+        <option value="13">&nbsp;彩妆/香水/护肤/保健</option>
+        <option value="14">&nbsp;女装/女士精品</option>
+        <option value="15">&nbsp;女士箱包/配件</option>
+        <option value="16">&nbsp;女鞋</option>
+        <option value="17">&nbsp;ZIPPO/瑞士军刀/饰品</option>
+        <option value="19">&nbsp;男装/男包/服饰配件</option>
+        <option value="20">&nbsp;婴幼/孕妇用品/童装</option>
+        <option value="21">&nbsp;玩具/模型/卡通产品</option>
+        <option value="22">&nbsp;书籍/报纸/杂志</option>
+        <option value="23">&nbsp;宠物/工艺品/礼品/鲜花/明星</option>
+        <option value="24">&nbsp;电影/电视/音乐/曲艺</option>
+        <option value="25">&nbsp;QQ专区</option>
+        <option value="26">&nbsp;女士内衣/袜子/泳装</option>
+        <option value="27">&nbsp;品牌手表/流行手表</option>
+        <option value="28">&nbsp;数码配件/电子元件</option>
+        <option value="29">&nbsp;笔记本电脑</option>
+        <option value="30">&nbsp;网络服务/电脑软件</option>
+        <option value="31">&nbsp;办公设备/文具/耗材</option>
+        <option value="32">&nbsp;保健品/食品/茶叶/特产</option>
+        <option value="33">&nbsp;家电/厨房电器/按摩保健器械</option>
+        <option value="34">&nbsp;家具/宜家代购</option>
+        <option value="35">&nbsp;居家日用/床品/厨房/工艺品</option>
+        <option value="36">&nbsp;装潢/灯具/五金/安防/卫浴</option>
+        <option value="37">&nbsp;手机号码/上网卡</option>
+        <option value="38">&nbsp;租赁业务</option>
+      </select>
+      <select name="city" size="1" id="name_city" style="width:190px;display:none">
+        <option value="0" selected="selected">- --全部地区-- -</option>
+        <option value="1" >北京</option>
+        <option value="2" >天津</option>
+        <option value="3" >重庆</option>
+        <option value="4" >上海</option>
+        <option value="5" >黑龙江</option>
+        <option value="6" >浙江</option>
+        <option value="7" >江苏</option>
+        <option value="8" >安徽</option>
+        <option value="9" >吉林</option>
+        <option value="10" >山东</option>
+        <option value="11" >辽宁</option>
+        <option value="12" >河北</option>
+        <option value="13" >河南</option>
+        <option value="14" >湖北</option>
+        <option value="15" >湖南</option>
+        <option value="16" >广东</option>
+        <option value="17" >广西</option>
+        <option value="18" >福建</option>
+        <option value="19" >宁夏</option>
+        <option value="20" >四川</option>
+        <option value="21" >云南</option>
+        <option value="22" >贵州</option>
+        <option value="23" >陕西</option>
+        <option value="24" >山西</option>
+        <option value="25" >青海</option>
+        <option value="26" >海南</option>
+        <option value="27" >内蒙古</option>
+        <option value="28" >新疆</option>
+        <option value="29" >甘肃</option>
+        <option value="30" >西藏</option>
+        <option value="31" >其他</option>
+      </select>
+      <a href="javascript:dosearch();"><img src="sch_btn_2.gif" width="46" height="25" border="0" align="top" /></a>
+    </form>
+  </div>
+</div>
+<!-- 搜索框结束 -->
+</body>
+</html>
