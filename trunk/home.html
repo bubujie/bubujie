@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>步步街首页重构</title>
+<style type="text/css">
+body {
+	font-size: 12px;
+	color: #ccc;
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+li {
+	list-style: none;
+}
+ul {
+	margin-left: 10px;
+	padding: 0;
+}
+img {
+	border: 0;
+}
+#ad {
+	width: 770px;
+	border: 1px solid #ccc;
+	padding-top: 10px;
+	padding-left:0;
+}
+#ad .img {
+	float: left;
+	width:85px;
+	margin-left: 17px;
+	padding: 2px 3px 4px 2px;
+	background:url(images/photoBox_main02.gif) no-repeat 0 0;
+}
+#ad h2 {
+	font-size: 12px;
+	text-align: center;
+}
+h3 {
+	background: #fff url(images/fenlei.png);
+	line-height: 30px;
+	height:30px;
+	width:600px;
+	padding-bottom:6px;
+	padding-left:40px;
+	font-size:14px;
+	color: #fff;
+	margin:0px;
+}
+#article {
+	width: 980px;
+	background: #fff url(images/boxCate_SP3.gif);
+	padding-top: 10px;
+}
+#article li {
+	height: 24px;
+	float: left;
+	line-height: 24px;
+	padding-left: 10px;
+}
+#article .arti_content {
+	width: 235px;
+	float: left;
+	margin-left: 5px;
+	background: url(images/mainC_con.gif) 0 100%;
+}
+#article .arti_content h3 {
+	background: url(images/StyleIndexLinkbg.gif) 0 0;
+	line-height: 25px;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+}
+#article .arti_content .arti_list {
+	background: url(images/text_bg.gif);
+	height: 24px;
+	line-height: 24px;
+}
+#article .arti_content .arti_list li {
+	text-align: center;
+	margin: 0 auto;
+}
+#article .arti_content .arti_list li {
+	padding-left: 10px;
+}
+#article .arti_4 {
+	width: 200px;
+	float: left;
+	background: url(images/leftMenu_bg_btm.gif) repeat 0 100%;
+}
+#article .arti_4 h3 {
+	background: url(images/tit_beauty11.gif);
+	font-size: 14px;
+	line-height: 29px;
+	height: 29px;
+	margin: 0;
+	padding: 0;
+}
+#article .arti_4 .arti_list {
+	background: url(images/helptextbg.gif);
+	height: 24px;
+}
+#article .arti_content .arti_top li, #article .arti_content .arti_bottom li {
+	width: 100px;
+	margin: 0;
+	padding-left: 10px;
+	background: url(images/arti_li.gif) no-repeat 4px 8px;
+}
+/* 商品分类 */
+dl {
+	width: 600px;
+	margin: 0;
+	padding: 0;
+}
+dt a {
+	float: left;
+	width: 160px;
+	padding-left: 40px;
+	background: url(images/list_off.gif) no-repeat 20px 5px;
+	line-height: 20px;
+	color: Navy;
+}
+dt a:hover {
+	background: url(images/list_on.gif) no-repeat 20px 5px;
+	line-height: 20px;
+	color: Orange;
+}
+/* 尾部信息 */
+#foot {
+	width: 980px;
+	background: url(images/boxCate_SP3_btm.gif) no-repeat 0 100%;
+}
+#foot_link li {
+	float: left;
+	width: 196px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<!-- 网页头部 -->
+<div>
+  <div></div>
+  <div> <img src="images/388.png" /> </div>
+</div>
+<!-- 第一主体 -->
+<div style="margin-left:190px;">
+ <img src="images/flash.png" />
+</div>
+<div style="width:980px; clear:both;">
+  <div style="float:left; width:190px; height:330px; background-color:#CCCCCC;"> sdfdsfsd<br />
+    <br />
+  </div>
+  <div style="float:left; width:640px;">
+    <h3>商品分类：</h3>
+    <dl>
+      <dt><a href="#">电脑硬件/台式电脑/网络设备</a></dt>
+      <dt><a href="#">珠宝首饰/时尚饰品</a></dt>
+      <dt><a href="#">手机</a></dt>
+      <dt><a href="#">住宅/商铺/办公楼销售</a></dt>
+      <dt><a href="#">数码相机/摄像机/冲印</a></dt>
+      <dt><a href="#">随身视听/音箱/耳机</a></dt>
+      <dt><a href="#">运动/户外/休闲/健身</a></dt>
+      <dt><a href="#">户外/军品/旅游/机票</a></dt>
+      <dt><a href="#">邮币/古董/字画/收藏</a></dt>
+      <dt><a href="#">汽车/配件/改装/摩托/自行车</a></dt>
+      <dt><a href="#">动漫周边/游戏周边</a></dt>
+      <dt><a href="#">网络游戏虚拟商品</a></dt>
+      <dt><a href="#">彩妆/香水/护肤/保健</a></dt>
+      <dt><a href="#">女装/女士精品</a></dt>
+      <dt><a href="#">女士箱包/配件</a></dt>
+      <dt><a href="#">女鞋</a></dt>
+      <dt><a href="#">ZIPPO/瑞士军刀/饰品</a></dt>
+      <dt><a href="#">成人用品/避孕用品/情趣内衣</a></dt>
+      <dt><a href="#">男装/男包/服饰配件</a></dt>
+      <dt><a href="#">婴幼/孕妇用品/童装</a></dt>
+      <dt><a href="#">玩具/模型/卡通产品</a></dt>
+      <dt><a href="#">书籍/报纸/杂志</a></dt>
+      <dt><a href="#">宠物/工艺品/礼品/鲜花/明星</a></dt>
+      <dt><a href="#">电影/电视/音乐/曲艺</a></dt>
+      <dt><a href="#">QQ专区</a></dt>
+      <dt><a href="#">女士内衣/袜子/泳装</a></dt>
+      <dt><a href="#">品牌手表/流行手表</a></dt>
+      <dt><a href="#">数码配件/电子元件</a></dt>
+      <dt><a href="#">笔记本电脑</a></dt>
+      <dt><a href="#">网络服务/电脑软件</a></dt>
+      <dt><a href="#">办公设备/文具/耗材</a></dt>
+      <dt><a href="#">保健品/食品/茶叶/特产</a></dt>
+      <dt><a href="#">家电/厨房电器/按摩保健器械</a></dt>
+      <dt><a href="#">家具/宜家代购</a></dt>
+      <dt><a href="#">居家日用/床品/厨房/工艺品</a></dt>
+      <dt><a href="#">装潢/灯具/五金/安防/卫浴</a></dt>
+      <dt><a href="#">手机号码/上网卡</a></dt>
+      <dt><a href="#">租赁业务</a></dt>
+    </dl>
+  </div>
+</div>
+<!-- 第二主体 -->
+<div>
+  <div id="ad">
+    <div class="img"><a href="#"><img src="images/promote_73.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+    <div class="img"><a href="#"><img src="images/promote_74.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+    <div class="img"><a href="#"><img src="images/promote_75.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+    <div class="img"><a href="#"><img src="images/promote_76.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+    <div class="img"><a href="#"><img src="images/promote_77.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+    <div class="img"><a href="#"><img src="images/promote_78.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+    <div class="img"><a href="#"><img src="images/promote_79.gif" /></a>
+      <h2><a href="#">说明</a></h2>
+    </div>
+  </div>
+  <div></div>
+</div>
+<!-- 第三主体 -->
+<div>
+  <div></div>
+  <div></div>
+</div>
+<!-- 第四主体 -->
+<div>
+  <div></div>
+  <div></div>
+</div>
+<!-- 文章区域 -->
+<div id="article">
+  <!-- 文章块1 -->
+  <div class="arti_content">
+    <h3>开店指南</h3>
+    <div class="arti_list">
+      <ul>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+      </ul>
+    </div>
+    <div class="arti_top">
+      <ul>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+    <div class="arti_bottom">
+      <ul>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 文章块1 -->
+  <div class="arti_content">
+    <h3>开店指南</h3>
+    <div class="arti_list">
+      <ul>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+      </ul>
+    </div>
+    <div class="arti_top">
+      <ul>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+    <div class="arti_bottom">
+      <ul>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 文章块1 -->
+  <div class="arti_content">
+    <h3>开店指南</h3>
+    <div class="arti_list">
+      <ul>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+      </ul>
+    </div>
+    <div class="arti_top">
+      <ul>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+    <div class="arti_bottom">
+      <ul>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 文章块1 -->
+  <div class="arti_content">
+    <h3>开店指南</h3>
+    <div class="arti_list">
+      <ul>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+        <li><a href="#">网上支付</a></li>
+      </ul>
+    </div>
+    <div class="arti_top">
+      <ul>
+        <li><a href="#">网络支付商机</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机</a></li>
+      </ul>
+    </div>
+    <div class="arti_bottom">
+      <ul>
+        <li><a href="#">网络支付商机限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+        <li><a href="#">网络支付商机无限</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 文章块1 -->
+</div>
+<!-- 尾部版权 -->
+<div id="foot"> <img src="images/99.png" /> </div>
+</body>
+</html>

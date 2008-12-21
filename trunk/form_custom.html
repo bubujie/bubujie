@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>买家注册</title>
+<link href="images/form/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="center"> <img src="images/2008.png" /> </div>
+<div id="middlecart">
+  <script type="text/javascript"> 
+<!--  
+//提交表单输入有效性检测 
+function Form_Validator(theForm) 
+{	
+	//姓名检测
+	if (theForm.username){
+		if (theForm.username.value == ""){
+			alert("请输入用户名！");
+			theForm.username.focus();
+			return (false);
+		}
+		var res = new RegExp("^([A-Za-z0-9_-]+)+$","ig");
+		if (!res.test(theForm.username.value))
+		{
+			theForm.username.focus();
+			alert("用户名中含有非法字符！");
+			return (false);
+		}
+	}
+	
+	//密码检测
+	if (theForm.passwd){
+		if (theForm.passwd.value == ""){
+			alert("请输入密码！");
+			theForm.passwd.focus();
+			return (false);
+		}
+		var pswstr = theForm.passwd.value;
+		if (pswstr.length < 4){
+			alert("密码不能少于4位！");
+			theForm.passwd.focus();
+			return (false);
+		}
+		
+		if (theForm.passwd.value != theForm.repasswd.value){
+			alert("两侧输入密码不一致！");
+			theForm.passwd.focus();
+			return (false);
+		}
+	}
+	
+	//E-MAIL邮件地址检测
+	if (theForm.email){
+		if (theForm.email.value == ""){
+			alert("请输入E-MAIL地址！");
+			theForm.email.focus();
+			return (false);
+		}
+		var re = new RegExp("^([A-Za-z0-9_|-]+[.]*[A-Za-z0-9_|-]+)+@[A-Za-z0-9|-]+([.][A-Za-z0-9|-]+)*[.][A-Za-z0-9]+$","ig");
+		{if (!re.test(theForm.email.value))
+			{alert("E-MAIL输入不正确！");
+			theForm.email.focus();
+			return false;
+			}
+		}
+	}
+}
+// -->
+</script>
+  <div id="wrap_bgt">
+    <div id="bg">
+      <div id="bgb">
+        <form name="FORM_TPL_REGISTER2" action="index.php" method="post" onSubmit="return Form_Validator(this)">
+          <input type="hidden" name="gOo" value="register_act.php" />
+          <div class="loginform">
+            <label>用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名&nbsp;： </label>
+            <input type="text" name="username" class="largeinput" />
+            <span class="p9orange">* </span> 建议您用email作用户名,以减少重复几率 <br />
+            <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;： </label>
+            <input type="password" name="passwd" class="largeinput" />
+            <span class="p9orange">* </span>不少于四个字符，不多于二十个字符<br />
+            <label>重&nbsp;复&nbsp;密&nbsp;码&nbsp;&nbsp;： </label>
+            <input type="password" name="repasswd" class="largeinput" />
+            <span class="p9orange">* </span> <br />
+            <label>取回密码问题&nbsp;： </label>
+            <select name=pw_question tabindex=4 alt="密码查询问题:无内容">
+              <option selected value="">--请您选择--</option>
+              <option value="我的宠物名字？">我的宠物名字？</option>
+              <option value="我最好的朋友是谁？">我最好的朋友是谁？</option>
+              <option value="我最喜爱的颜色？">我最喜爱的颜色？</option>
+              <option value="我最喜爱的电影？">我最喜爱的电影？</option>
+              <option value="我最喜爱的影星？">我最喜爱的影星？</option>
+              <option value="我最喜爱的歌曲？">我最喜爱的歌曲？</option>
+              <option value="我最喜爱的食物？">我最喜爱的食物？</option>
+              <option value="我最大的爱好？">我最大的爱好？</option>
+              <option value="我中学校名全称是什么？">我中学校名全称是什么？</option>
+              <option value="我的座右铭是？">我的座右铭是？</option>
+              <option value="我最喜欢的小说的名字？">我最喜欢的小说的名字？</option>
+              <option value="我最喜欢的卡通人物名字？">我最喜欢的卡通人物名字？</option>
+              <option value="我母亲父亲的生日？">我母亲父亲的生日？</option>
+              <option value="我最欣赏的一位名人的名字？">我最欣赏的一位名人的名字？</option>
+              <option value="我最喜欢的运动队全称？">我最喜欢的运动队全称？</option>
+              <option value="我最喜欢的一句影视台词？">我最喜欢的一句影视台词？</option>
+            </select>
+            在取回密码时需填写本问题 <br />
+            <label>取回密码答案&nbsp;： </label>
+            <input type="text" name="pw_answer" class="largeinput" />
+            在取回密码时需填写本回答。 <br />
+            <label>E-mail&nbsp;地址&nbsp;&nbsp;： </label>
+            <input type="text" name="email" class="largeinput" />
+            <span class="p9orange">* </span>很重要！订单、发货等信息都会发送到此信箱。 <br />
+            <label>真&nbsp;实&nbsp;姓&nbsp;名&nbsp;&nbsp;： </label>
+            <input type="text" name="truename" class="largeinput" />
+            <br />
+            <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;： </label>
+            <input type="radio" name="sex" value="1" checked="checked" />
+            男
+            <input type="radio" name="sex" value="2" />
+            女 <br />
+            <label>出&nbsp;生&nbsp;日&nbsp;期&nbsp;&nbsp;： </label>
+            <input type="text" class="largeinput" name="byear" size="4" maxlength="4" value="" />
+            <select name="bmonth">
+              <option value="1" >1 </option>
+              <option value="2" >2 </option>
+              <option value="3" >3 </option>
+              <option value="4" >4 </option>
+              <option value="5" >5 </option>
+              <option value="6" >6 </option>
+              <option value="7" >7 </option>
+              <option value="8" >8 </option>
+              <option value="9" >9 </option>
+              <option value="10" >10 </option>
+              <option value="11" >11 </option>
+              <option value="12" >12 </option>
+            </select>
+            <select name="bday">
+              <option value="1" >1 </option>
+              <option value="2" >2 </option>
+              <option value="3" >3 </option>
+              <option value="4" >4 </option>
+              <option value="5" >5 </option>
+              <option value="6" >6 </option>
+              <option value="7" >7 </option>
+              <option value="8" >8 </option>
+              <option value="9" >9 </option>
+              <option value="10" >10 </option>
+              <option value="11" >11 </option>
+              <option value="12" >12 </option>
+              <option value="13" >13 </option>
+              <option value="14" >14 </option>
+              <option value="15" >15 </option>
+              <option value="16" >16 </option>
+              <option value="17" >17 </option>
+              <option value="18" >18 </option>
+              <option value="19" >19 </option>
+              <option value="20" >20 </option>
+              <option value="21" >21 </option>
+              <option value="22" >22 </option>
+              <option value="23" >23 </option>
+              <option value="24" >24 </option>
+              <option value="25" >25 </option>
+              <option value="26" >26 </option>
+              <option value="27" >27 </option>
+              <option value="28" >28 </option>
+              <option value="29" >29 </option>
+              <option value="30" >30 </option>
+              <option value="31" >31 </option>
+            </select>
+            <br />
+            <label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区&nbsp;： </label>
+            <select name="province" size="1">
+              <option value="北京" >北京 </option>
+              <option value="上海" >上海 </option>
+              <option value="天津" >天津 </option>
+              <option value="重庆" >重庆 </option>
+              <option value="黑龙江" >黑龙江 </option>
+              <option value="吉林" >吉林 </option>
+              <option value="辽宁" >辽宁 </option>
+              <option value="内蒙古" >内蒙古 </option>
+              <option value="新疆" >新疆 </option>
+              <option value="甘肃" >甘肃 </option>
+              <option value="西藏" >西藏 </option>
+              <option value="河北" >河北 </option>
+              <option value="河南" >河南 </option>
+              <option value="湖北" >湖北 </option>
+              <option value="湖南" >湖南 </option>
+              <option value="山东" >山东 </option>
+              <option value="浙江" >浙江 </option>
+              <option value="江苏" >江苏 </option>
+              <option value="安徽" >安徽 </option>
+              <option value="广东" >广东 </option>
+              <option value="广西" >广西 </option>
+              <option value="福建" >福建 </option>
+              <option value="宁夏" >宁夏 </option>
+              <option value="四川" >四川 </option>
+              <option value="云南" >云南 </option>
+              <option value="贵州" >贵州 </option>
+              <option value="陕西" >陕西 </option>
+              <option value="青海" >青海 </option>
+              <option value="山西" >山西 </option>
+              <option value="江西" >江西 </option>
+              <option value="海南" >海南 </option>
+              <option value="其他" >其他 </option>
+            </select>
+            <br />
+            <label>联&nbsp;系&nbsp;地&nbsp;址&nbsp; ： </label>
+            <input type="text" name="address" class="largeinput" size=40 />
+            <br />
+            <label>邮&nbsp;政&nbsp;编&nbsp;码&nbsp;&nbsp;： </label>
+            <input type="text" name="postcode" class="largeinput" />
+            <br />
+            <label>移&nbsp;动&nbsp;电&nbsp;话&nbsp;&nbsp;： </label>
+            <input type="text" name="mobile" class="largeinput" />
+            <br />
+            <label>固&nbsp;定&nbsp;电&nbsp;话&nbsp;&nbsp;： </label>
+            <input type="text" name="phone" class="largeinput" />
+            <br />
+            <label>验&nbsp;&nbsp;&nbsp;证&nbsp;&nbsp;&nbsp;码&nbsp;： </label>
+            <input type="text" name="phone" class="largeinput" />
+            <span class="p9orange">* </span>请输入左侧验证码字符 <br />
+            <label>&nbsp; </label>
+            <div class="registersubmitmessage">
+              <input type="submit" name="Submit2" value="我已阅读并接受以下条款，点击注册 &gt;" class="largebtn" />
+            </div>
+            <h2><strong>接受用户协议及其相关的条款和条件，并承诺如下：</strong></h2>
+            <textarea name="textarea" cols="70" rows="5" readonly>网页上发布信息或者利用本地购物网的服务时必须符合中国有关法规(部分法规请见附录)，不得在本地购物网的网页上或者利用本地购物网的服务制作、复制、发布、传播以下信息：
+(a)反对宪法所确定的基本原则的；　
+(b) 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+(c) 损害国家荣誉和利益的；　 
+(d) 煽动民族仇恨、民族歧视，破坏民族团结的；　
+(e) 破坏国家宗教政策，宣扬邪教和封建迷信的；　
+(f) 散布谣言，扰乱社会秩序，破坏社会稳定的；　
+(g) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；　
+(h) 侮辱或者诽谤他人，侵害他人合法权益的；
+(i) 含有法律、行政法规禁止的其他内容的。
+</textarea>
+            <br />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style=clear:both> </div>
+</div>
+<div class="center"> <img src="images/99.png" /> </div>
+</body>
+</html>

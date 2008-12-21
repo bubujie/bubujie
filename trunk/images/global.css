@@ -1,0 +1,281 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* Set up the default font and ovrall size to include image */
+body {
+	font-size: 12px;
+	line-height: 16px;
+	color: #999;
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+li {
+	list-style: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+	margin:0;
+	padding:0;
+}
+.clear {
+	clear:both;
+}
+/* 页面头部开始 */
+#top{
+	width: 980px;
+	height: 55px;
+}
+#top #left{
+	float: left;
+	height: 55px;
+}
+#top #center{
+	float: left;
+	width: 500px;
+	height: 55px;
+}
+#top #right #link_top{
+	height: 20px;
+	padding-top: 10px;
+}
+#top #right #link_bottom{
+	height: 25px;
+}
+#top #right a{
+	display: inline-block;
+	background: url(top_link_bg.gif);
+	width: 62px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	color: #666;
+	text-decoration: none;
+}
+/* 页面头部结束 */
+/* 导航菜单开始 */
+#nav { /*  */
+	margin:0; /* 边界 */
+	padding-bottom: 25px; /* 下边界供二级菜单漂浮的位置 */
+}
+#nav { /*  */
+	float:left; /*  */
+	padding-left:60px; /* 菜单项左补白，决定首相和左界面的距离 */
+	width:920px; /* 菜单横条宽度，视觉宽度为width和padding-left之和 */
+	height:40px; /* 菜单横条高度 */
+	background:#d1e1ce url("nav_bg_high_2.gif") repeat top left; /* 菜单横条有刻线背景 */
+}
+#nav .select,
+#nav .current { /*  */
+	margin: 0; /* 清除边界 */
+	padding: 0; /* 清除补白 */
+	list-style:none; /* 清除列表点 */
+	display:block; /* 列表块状 */
+	float:left; /* 列表横向排列 */
+}
+#nav .sub { /*  */
+	margin:0; /* 清除边界 */
+	padding:0; /* 清除补白 */
+	list-style:none; /*  */
+}
+#nav li {
+	display:block; /*  */
+	float:left; /*  */
+	margin:0; /*  */
+	padding:0 20px 0 0; /*  */
+	position:relative; /*  */
+	z-index:100; /*  */
+}
+#nav .sub li {/*  */
+	padding: 0;/*  */
+}
+#nav .current li {/*  */
+	z-index:50; /*  */
+}
+#nav .select a, 
+#nav .current a { /* 一级分类外（右）块全部 */
+	display:block; /* 内联元素块状显示 */
+	height:40px; /* 内联元素块状高度 */
+	float:left; /* 横向显示 */
+	width:90px; /* 一级菜单各项宽度 */
+	background:url("nav_main_right_high.gif") no-repeat 0 0px; /* 全蓝右背景 */
+	padding:0; /* 清除补白 */
+	border-bottom:0px solid #765; /* ………… */
+	text-decoration:none; /* 清除链接下划线 */
+	font-weight:bold; /* ………… */
+	line-height:20px; /* ………… */
+	white-space:nowrap; /* 文本不换行，直到出现br */
+	margin-right: 0px; /* ………… */
+	margin-left: 0px; /* ………… */
+}
+#nav .current a { /* 一级分类外（右）块当前 */
+	background:url("nav_main_right_high.gif") no-repeat 100% -40px; /* 白缺口右背景 */
+	border-color:#fff; /* ………… */
+}
+#nav .select a b, 
+#nav .current a b { /* 一级分类内（左）块全部 */
+	display:block; /* 内联元素块状显示 */
+	text-align: center; /* 文字居中 */
+	height:20px; /* 内联元素块状高度，以便设置显示位置 */
+	background:url("nav_main_left_high.gif") no-repeat 0 0px; /* 全蓝左背景 */
+	padding:10px 0px 10px 0px; /* 文字纵向剧中 */
+	color:#fff; /* 文字颜色（白色） */
+	width: 100%; /* 宽度 */
+}
+#nav .current a b{ /* 一级分类内（左）块当前 */
+	background:url("nav_main_left_high.gif") no-repeat 0 -40px; /* 白缺口左背景 */
+	color: #f90; /* 文字颜色（橙色） */
+	padding:15px 0px 5px 0px; /* 文字偏下显示 */
+}
+#nav .select a:hover, 
+#nav li:hover a { /* 一级悬停（右）块 */
+	background:url("nav_main_right_high.gif") no-repeat 100% -40px; /* 白缺口右背景 */
+	border-color:#369;
+}
+#nav .select a:hover b, 
+#nav .select li:hover a b { /* 一级悬停（左）块 */
+	background:url("nav_main_left_high.gif") no-repeat 0 -40px; /* 白缺口左背景 */
+	padding:15px 0 5px 0; /* 文字偏下显示 */
+	color:#369; /* 文字颜色（蓝色） */
+	cursor:pointer; /* 一级非当前悬停手性指针 */
+}
+/* ------------------------------------------------------------ */
+#nav .sub { /* 二级非当前默认不显示 */
+	display:none; /* 非当前默认不显示 */
+}
+#nav table { /* 专属 IE5.5 和 IE6 */
+	position:absolute; /*  */
+	border-collapse:collapse; /*  */
+	left:0; /*  */
+	top:0; /*  */
+	font-size:12px;/*  */
+}
+
+/* #nav .current a b {background:url("nav_main_left_high.gif") no-repeat 0 -40px; padding-top:15px; color:#963;} */
+
+#nav .current .sub, 
+#nav .select a:hover .sub, 
+#nav .select li:hover .sub { /* 二级综合块悬停显示 */
+	display:block; /* 二级内联元素块状显示 */
+	position:absolute; /* 二级相对位置 */
+	width:900px; /* 二级宽度 */
+	top:40px; /* 相对Y位置 */
+	background:#fff; /* 二级整块背景 */
+	margin-top:0px; /*  */
+	padding:0px 0 0px 0; /* 清除补白 */
+}
+#nav .current .sub li a, 
+#nav .select a:hover .sub li a, 
+#nav .select li:hover .sub li a { /* 二级子块显示 */
+	display:inline; /*  */
+	background:#fff; /*  */
+	border:0px solid #ddd; /*  */
+	padding:0 5px 0 15px; /* 二级子块补白（文字定位） */
+	margin:0 0px 0 0; /*  */
+	width:auto; /*  */
+	white-space:nowrap; /* 文本不换行，直到出现br */
+	font-weight:normal; /* ………… */
+	font-size:12px; /* 二级子菜单文字大小 */
+	height:20px; /* 二级子块高度 */
+	line-height:20px; /* 二级子菜单文字行高 */
+	color: #369; /* 二级子菜单文字颜色 */
+}
+#nav .current .sub .current_sub a, /* 二级当前子块（当前的当前） */
+#nav .current .sub a:hover { /* 一级当前二级子块悬停 */
+	border-color:#aba; /* ………… */
+	background: url(nav_sub_on_1.gif) no-repeat 0 5px; /* 二级子块悬停背景 */
+	color:#f90; /* 文字颜色（橙色） */
+	}
+#nav .sub li a:hover, 
+#nav .select a:hover .sub li a:hover, 
+#nav .select li:hover .sub li a:hover { /* 默认隐藏的二级子块悬停 */
+	border-color:#aba; /* ………… */
+	background: url(nav_sub_on_2.gif) no-repeat 0 5px; color:#a81ef7; /* 默认隐藏的二级子块悬停背景 */
+}
+* html #nav .current .sub, * html #nav .select a:hover .sub { /* hack黑客 */
+	margin-top:0; margin-top:0px; /*  */
+}
+/* 二级各整块定位 */
+#nav .n1 .sub {left: 0px;}
+#nav .n2 .sub {left: -110px;}
+#nav .n3 .sub {left: -220px;}
+#nav .n4 .sub {left: -330px;}
+#nav .n5 .sub {left: -440px;}
+#nav .n6 .sub {left: -550px;}
+#nav .n7 .sub {left: -660px;}
+#nav .n8 .sub {left: -770px;}
+/* 导航菜单结束 */
+/* 导航搜索开始 */
+#search{ /*  */
+	width: 980px; /* 搜索区域宽度 */
+	height: 35px; /* 搜索区域高度 */
+	background: #000 url(nav_bg_high_2.gif) 0 -65px repeat; /* 搜索区域背景 */
+	clear: left; /*  */
+}
+#sch_box{ /*  */
+	text-align: right; /* 搜索框居于右侧 */
+	height: 25px; /* 搜索框高度 */
+}
+#sch_box form{ /*  */
+	height: 25px; /* 定义表单高度使其不超出高度 */
+	margin: 0 100px 0 auto; /* 与右侧保持距离 */
+	padding: 0; /* 清除补白 */
+
+}
+#sch_box img{ /*  */
+	vertical-align: top; /* 搜索按钮上移与搜索框同高 */
+}
+#sch_box #key{ /*  */
+	background-color: #E6F6FB; /* 输入框背景色（淡蓝） */
+	font-weight: bold; /* 输入文字粗体 */
+	color: #8A2BE2; /* 输入文字颜色（紫色） */
+}
+#sch_box select,#sch_box option{ /*  */
+	background-color: #E6F6FB; /* 背景色（淡蓝） */
+}
+/* 导航搜索结束 */
+/* 页面尾部开始 */
+#foot {
+	width: 980px;/* 尾部区块宽度 */
+	clear: both;/* 清除两侧内容 */
+	margin-top:20px;/* 上部边界 */
+}
+#foot_link {/* 尾部链接横条 */
+	background: url(images/footlinkbg_30.gif);/* 链接横条背景 */
+	height: 30px;/* KEY，链接横条高度 */
+}
+#foot_link_l{
+	float:left;/* 文字链接左浮动 */
+}
+#foot_link_l li {/* 尾部链接列表 */
+	float: left;/* 列表项横向排列 */
+	width: 175px;/* 列表项宽度 */
+	text-align: center;/* 列表文字居中 */
+	line-height:30px;/* 列表项文字 */
+}
+#foot_link_r{
+	float:right;/* 图片链接块右浮动 */
+	padding-right:5px;/* 图片链接块右补白 */
+}
+#foot_link_r img {/* 图片链接 */
+	padding:9px 3px 10px 3px;/* 图片定义为对称块，图片高度11px */
+}
+#foot_info {/* 尾部信息子快 */
+	padding:10px;/* 环形补白 */
+}
+#foot_info span {/* 尾部信息子快图片 */
+	display:inline-block;/* KEY，以使其他块状属性生效 */
+	margin-bottom:-2px;/* KEY，图片与文字视觉持平 */
+	overflow:hidden;/* KEY,隐藏超出部分,使区域不被撑高 */
+}
+/* 页面尾部结束 */

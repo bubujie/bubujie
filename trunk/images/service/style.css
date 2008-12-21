@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	width:980px;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background: url(none) no-repeat 0 0;
+}
+#wrap {
+	width:980px;
+	background: url(wrap_bg.gif) repeat-y 0 0;
+	overflow: auto;
+	margin-left: 10px;
+}
+#wrap #bgt{
+	background: url(wrap_bgt.gif) no-repeat 0 0;
+	width:100%; /*KEY,避免IE浏览器元素隐藏*/
+}
+#wrap #bgb{
+	background: url(wrap_bgb.gif) no-repeat 0 100%;
+	width:100%; /*KEY,避免IE浏览器元素隐藏*/
+}
+#wrap #main{
+	width:769px;
+	float:left;
+	padding: 20px 40px 40px 40px;
+}
+#wrap #sidebar{
+	width:111px;
+	margin-top: 80px;
+	padding: 0;
+	float: left;
+	height: 100px;
+	height: 100%
+}
+ul{
+	padding:0;
+	margin:0;
+}
+li{
+	margin: 0;
+	padding: 0;
+}
+li a{
+	border-left:solid 1px #d8d8d8;
+}
+li.on a{
+	border:0px;
+}
+dl{
+	background:url(ul.gif) no-repeat 0 100%;
+	margin:0px;
+	padding:0;
+	color:#3C0606;
+}
+dt{
+	background:url(ul_bgt.gif) no-repeat 0 0;
+}
+.go_top{
+	text-align:right;
+	height:20px;
+	padding-top:5px;
+}

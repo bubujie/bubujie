@@ -1,0 +1,53 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin-top: 0;
+	padding-top: 0;
+	background: url(bg_body9.jpg) no-repeat 50% 60px;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#wrap_bgt {
+	width:700px;
+	background: url(bgt.gif) repeat-y 0 0;
+	margin: 50px auto 10px auto;
+	padding-top:100px;
+}
+#wrap_bgt #bg{
+	background: url(bgm.gif) repeat-y 0 0;
+	width:100%; /*KEY,避免IE浏览器元素隐藏*/
+}
+#wrap_bgt #bgb{
+	background: url(bgb.gif) no-repeat 0 100%;
+	width:100%; /*KEY,避免IE浏览器元素隐藏*/
+	padding:10px 10px 20px 40px;
+	font-size:12px;
+	line-height:24px;
+}
+#wrap_bgt label{
+	text-align:right;
+	width:150px;
+	display:inline-block;
+}
+#wrap_bgt span{
+	color:red;
+}
+#wrap_bgt .largeinput{
+	width:150px;
+}
+#wrap_bgt .registersubmitmessage{
+	margin:0 auto;
+	width:600px;
+}
+#wrap_bgt .center{
+	margin: 0 auto;
+}
+#wrap_bgt form label{
+width:100px;
+display: inline-block;
+}
+#wrap_bgt table{
+width:340px;
+}
