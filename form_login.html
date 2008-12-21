@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>买家登录</title>
+<link href="images/form/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="center"> <img src="images/2008.png" /> </div>
+<div id="middlecart">
+  <script type="text/javascript"> 
+<!--  
+//提交表单输入有效性检测 
+function Form_Validator(theForm) 
+{	
+	//姓名检测
+	if (theForm.username){
+		if (theForm.username.value == ""){
+			alert("请输入用户名！");
+			theForm.username.focus();
+			return (false);
+		}
+		var res = new RegExp("^([A-Za-z0-9_-]+)+$","ig");
+		if (!res.test(theForm.username.value))
+		{
+			theForm.username.focus();
+			alert("用户名中含有非法字符！");
+			return (false);
+		}
+	}
+	
+	//密码检测
+	if (theForm.passwd){
+		if (theForm.passwd.value == ""){
+			alert("请输入密码！");
+			theForm.passwd.focus();
+			return (false);
+		}
+		var pswstr = theForm.passwd.value;
+		if (pswstr.length < 4){
+			alert("密码不能少于4位！");
+			theForm.passwd.focus();
+			return (false);
+		}
+		
+		if (theForm.passwd.value != theForm.repasswd.value){
+			alert("两侧输入密码不一致！");
+			theForm.passwd.focus();
+			return (false);
+		}
+	}
+	
+	//E-MAIL邮件地址检测
+	if (theForm.email){
+		if (theForm.email.value == ""){
+			alert("请输入E-MAIL地址！");
+			theForm.email.focus();
+			return (false);
+		}
+		var re = new RegExp("^([A-Za-z0-9_|-]+[.]*[A-Za-z0-9_|-]+)+@[A-Za-z0-9|-]+([.][A-Za-z0-9|-]+)*[.][A-Za-z0-9]+$","ig");
+		{if (!re.test(theForm.email.value))
+			{alert("E-MAIL输入不正确！");
+			theForm.email.focus();
+			return false;
+			}
+		}
+	}
+}
+// -->
+</script>
+  <div id="wrap_bgt">
+    <div id="bg">
+      <div id="bgb">
+        <form name="FORM_TPL_REGISTER2" action="index.php" method="post" onSubmit="return Form_Validator(this)">
+          <input type="hidden" name="gOo" value="register_act.php" />
+          <table>
+            <tr>
+              <td><label>用&nbsp;户&nbsp;名&nbsp;： </label>
+                <input type="text" name="username" class="largeinput" />
+              </td>
+              <td rowspan="2"><a href="javascript:dosearch();"><img src="images/form/08_login.gif" /></a></td>
+            </tr>
+            <tr>
+              <td><label>密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;： </label>
+                <input type="password" name="passwd" class="largeinput" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div style=clear:both> </div>
+</div>
+<div class="center"> <img src="images/99.png" /> </div>
+</body>
+</html>

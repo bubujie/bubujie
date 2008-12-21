@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>商家注册</title>
+<link href="images/form/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"> 
+<!--  
+//提交表单输入有效性检测 
+function Form_Validator(theForm) 
+{	
+	//姓名检测
+	if (theForm.username){
+		if (theForm.username.value == ""){
+			alert("请输入用户名！");
+			theForm.username.focus();
+			return (false);
+		}
+		var res = new RegExp("^([A-Za-z0-9_-]+)+$","ig");
+		if (!res.test(theForm.username.value))
+		{
+			theForm.username.focus();
+			alert("用户名中含有非法字符！");
+			return (false);
+		}
+	}
+	
+	//密码检测
+	if (theForm.passwd){
+		if (theForm.passwd.value == ""){
+			alert("请输入密码！");
+			theForm.passwd.focus();
+			return (false);
+		}
+		var pswstr = theForm.passwd.value;
+		if (pswstr.length < 4){
+			alert("密码不能少于4位！");
+			theForm.passwd.focus();
+			return (false);
+		}
+		
+		if (theForm.passwd.value != theForm.repasswd.value){
+			alert("两侧输入密码不一致！");
+			theForm.passwd.focus();
+			return (false);
+		}
+	}
+	
+	//E-MAIL邮件地址检测
+	if (theForm.email){
+		if (theForm.email.value == ""){
+			alert("请输入E-MAIL地址！");
+			theForm.email.focus();
+			return (false);
+		}
+		var re = new RegExp("^([A-Za-z0-9_|-]+[.]*[A-Za-z0-9_|-]+)+@[A-Za-z0-9|-]+([.][A-Za-z0-9|-]+)*[.][A-Za-z0-9]+$","ig");
+		{if (!re.test(theForm.email.value))
+			{alert("E-MAIL输入不正确！");
+			theForm.email.focus();
+			return false;
+			}
+		}
+	}
+}
+// -->
+</script>
+</head>
+<body>
+<div> <img src="images/2008.png" /> </div>
+<div id="wrap">
+  <div id="bgt">
+    <div id="bgb">
+      <form action="shop_register_act.php" method="post" name="searchcity1" id="form1" onsubmit="javascript: return checkSubmit(this)">
+        <input type="hidden" value="steptwo" name="action" />
+        <input type="hidden" name="gOo" value="register_act.php" />
+        <!-- 用户名 -->
+        <label>用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名&nbsp;： </label>
+        <input type="text" name="username" class="input_width" />
+        <span>* </span> 建议您用email作用户名,以减少重复几率 <br />
+        <!-- 密码 -->
+        <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;： </label>
+        <input type="password" name="passwd" class="input_width" />
+        <span>* </span>不少于四个字符，不多于二十个字符<br />
+        <!-- 重复密码 -->
+        <label>重&nbsp;复&nbsp;密&nbsp;码&nbsp;&nbsp;： </label>
+        <input type="password" name="repasswd" class="input_width" />
+        <span>* </span> <br />
+        <!-- 邮件地址 -->
+        <label>E-mail&nbsp;地址&nbsp;&nbsp;： </label>
+        <input type="text" name="email" class="input_width" />
+        <span>* </span>很重要！订单、发货等信息都会发送到此信箱。 <br />
+        <label>真&nbsp;实&nbsp;姓&nbsp;名&nbsp;&nbsp;： </label>
+        <input type="text" name="truename" class="input_width" />
+        <span>* </span> <br />
+        <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;： </label>
+        <input type="radio" name="sex" value="1" checked="checked" />
+        男
+        <input type="radio" name="sex" value="2" />
+        女 <br />
+        <label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区&nbsp;： </label>
+        <select name="province" size="1">
+          <option value="北京" >北京 </option>
+          <option value="上海" >上海 </option>
+          <option value="天津" >天津 </option>
+          <option value="重庆" >重庆 </option>
+          <option value="黑龙江" >黑龙江 </option>
+          <option value="吉林" >吉林 </option>
+          <option value="辽宁" >辽宁 </option>
+          <option value="内蒙古" >内蒙古 </option>
+          <option value="新疆" >新疆 </option>
+          <option value="甘肃" >甘肃 </option>
+          <option value="西藏" >西藏 </option>
+          <option value="河北" >河北 </option>
+          <option value="河南" >河南 </option>
+          <option value="湖北" >湖北 </option>
+          <option value="湖南" >湖南 </option>
+          <option value="山东" >山东 </option>
+          <option value="浙江" >浙江 </option>
+          <option value="江苏" >江苏 </option>
+          <option value="安徽" >安徽 </option>
+          <option value="广东" >广东 </option>
+          <option value="广西" >广西 </option>
+          <option value="福建" >福建 </option>
+          <option value="宁夏" >宁夏 </option>
+          <option value="四川" >四川 </option>
+          <option value="云南" >云南 </option>
+          <option value="贵州" >贵州 </option>
+          <option value="陕西" >陕西 </option>
+          <option value="青海" >青海 </option>
+          <option value="山西" >山西 </option>
+          <option value="江西" >江西 </option>
+          <option value="海南" >海南 </option>
+          <option value="其他" >其他 </option>
+        </select>
+        <br />
+        <label>机&nbsp;构&nbsp;名&nbsp;称&nbsp; ： </label>
+        <input type="text" name="address" class="input_width" size=40 />
+        <span>* </span> <br />
+        <label>联&nbsp;系&nbsp;地&nbsp;址&nbsp; ： </label>
+        <input type="text" name="address" class="input_width" size=40 />
+        <span>* </span> <br />
+        <label>移&nbsp;动&nbsp;电&nbsp;话&nbsp;&nbsp;： </label>
+        <input type="text" name="mobile" class="input_width" />
+        <span>* </span> <br />
+        <label>邮&nbsp;政&nbsp;编&nbsp;码&nbsp;&nbsp;： </label>
+        <input type="text" name="postcode" class="input_width" />
+        <br />
+        <label>固&nbsp;定&nbsp;电&nbsp;话&nbsp;&nbsp;： </label>
+        <input type="text" name="phone" class="input_width" />
+        <br />
+        <label>验&nbsp;&nbsp;&nbsp;证&nbsp;&nbsp;&nbsp;码&nbsp;： </label>
+        <input type="text" name="phone" class="input_width" />
+        <span>* </span>请输入左侧验证码字符 <br />
+        <label>&nbsp; </label>
+        <div id="btn">
+          <input type="submit" name="Submit2" value="&nbsp;下一步&gt;&nbsp;" class="smallbtn" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div> <img src="images/99.png" /> </div>
+</body>
+</html>

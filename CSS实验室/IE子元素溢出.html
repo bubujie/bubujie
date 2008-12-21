@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IE子元素溢出</title>
+<style type="text/css">
+.box{
+	border:2px solid #336699;
+}
+.subbox{
+	display:inline;
+}
+.subbox{
+	float:left;
+	width:50px;
+	height:80px;
+	margin:2px;
+	background-color:#ff99cc;
+}
+.clear{ /*MUST，清除两边浮动元素*/
+	clear:both;
+}
+* html .height{ /*HACK，只能在IE中被解析，定义父元素一个有限高度，激活高度自动计算能力*/
+	height:1px;
+}
+</style>
+</head>
+
+<body>
+<div class="box height">
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="subbox"></div>
+  <div class="clear"></div>
+</div>
+<div>此溢出问题只出现于IE浏览器，通过定义“父元素框”的width或者height都可以解决此溢出问题，若为固定宽度父框则不必用HACK来解决</div>
+</body>
+
+</html>

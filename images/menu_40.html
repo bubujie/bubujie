@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>步步街 CSS+XHTML代码</title>
+</head>
+<style type="text/css">
+/* Set up the default font and ovrall size to include image */
+body {
+	background: #fff;
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+img{
+	border: 0;
+}
+/* 页面头部开始 */
+#top{
+	width: 980px;
+	height: 55px;
+}
+#top #left{
+	float: left;
+	height: 55px;
+}
+#top #center{
+	float: left;
+	width: 500px;
+	height: 55px;
+}
+#top #right #link_top{
+	height: 20px;
+	padding-top: 10px;
+}
+#top #right #link_bottom{
+	height: 25px;
+}
+#top #right a{
+	display: inline-block;
+	background: url(top_link_bg.gif);
+	width: 62px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	color: #666;
+	text-decoration: none;
+}
+/* 页面头部结束 */
+/* 导航菜单开始 */
+#nav { /*  */
+	margin:0; /* 边界 */
+	padding-bottom: 25px; /* 下边界供二级菜单漂浮的位置 */
+}
+#nav { /*  */
+	float:left; /*  */
+	padding-left:60px; /* 菜单项左补白，决定首相和左界面的距离 */
+	width:920px; /* 菜单横条宽度，视觉宽度为width和padding-left之和 */
+	height:40px; /* 菜单横条高度 */
+	background:#d1e1ce url("nav_bg_high_2.gif") repeat top left; /* 菜单横条有刻线背景 */
+}
+#nav .select,
+#nav .current { /*  */
+	margin: 0; /* 清除边界 */
+	padding: 0; /* 清除补白 */
+	list-style:none; /* 清除列表点 */
+	display:block; /* 列表块状 */
+	float:left; /* 列表横向排列 */
+}
+#nav .sub { /*  */
+	margin:0; /* 清除边界 */
+	padding:0; /* 清除补白 */
+	list-style:none; /*  */
+}
+#nav li {
+	display:block; /*  */
+	float:left; /*  */
+	margin:0; /*  */
+	padding:0 20px 0 0; /*  */
+	position:relative; /*  */
+	z-index:100; /*  */
+}
+#nav .sub li {/*  */
+	padding: 0;/*  */
+}
+#nav .current li {/*  */
+	z-index:50; /*  */
+}
+#nav .select a, 
+#nav .current a { /* 一级分类外（右）块全部 */
+	display:block; /* 内联元素块状显示 */
+	height:40px; /* 内联元素块状高度 */
+	float:left; /* 横向显示 */
+	width:90px; /* 一级菜单各项宽度 */
+	background:url("nav_main_right_high.gif") no-repeat 0 0px; /* 全蓝右背景 */
+	padding:0; /* 清除补白 */
+	border-bottom:0px solid #765; /* ………… */
+	text-decoration:none; /* 清除链接下划线 */
+	font-weight:bold; /* ………… */
+	line-height:20px; /* ………… */
+	white-space:nowrap; /* 文本不换行，直到出现br */
+	margin-right: 0px; /* ………… */
+	margin-left: 0px; /* ………… */
+}
+#nav .current a { /* 一级分类外（右）块当前 */
+	background:url("nav_main_right_high.gif") no-repeat 100% -40px; /* 白缺口右背景 */
+	border-color:#fff; /* ………… */
+}
+#nav .select a b, 
+#nav .current a b { /* 一级分类内（左）块全部 */
+	display:block; /* 内联元素块状显示 */
+	text-align: center; /* 文字居中 */
+	height:20px; /* 内联元素块状高度，以便设置显示位置 */
+	background:url("nav_main_left_high.gif") no-repeat 0 0px; /* 全蓝左背景 */
+	padding:10px 0px 10px 0px; /* 文字纵向剧中 */
+	color:#fff; /* 文字颜色（白色） */
+	width: 100%; /* 宽度 */
+}
+#nav .current a b{ /* 一级分类内（左）块当前 */
+	background:url("nav_main_left_high.gif") no-repeat 0 -40px; /* 白缺口左背景 */
+	color: #f90; /* 文字颜色（橙色） */
+	padding:15px 0px 5px 0px; /* 文字偏下显示 */
+}
+#nav .select a:hover, 
+#nav li:hover a { /* 一级悬停（右）块 */
+	background:url("nav_main_right_high.gif") no-repeat 100% -40px; /* 白缺口右背景 */
+	border-color:#369;
+}
+#nav .select a:hover b, 
+#nav .select li:hover a b { /* 一级悬停（左）块 */
+	background:url("nav_main_left_high.gif") no-repeat 0 -40px; /* 白缺口左背景 */
+	padding:15px 0 5px 0; /* 文字偏下显示 */
+	color:#369; /* 文字颜色（蓝色） */
+	cursor:pointer; /* 一级非当前悬停手性指针 */
+}
+/* ------------------------------------------------------------ */
+#nav .sub { /* 二级非当前默认不显示 */
+	display:none; /* 非当前默认不显示 */
+}
+#nav table { /* 专属 IE5.5 和 IE6 */
+	position:absolute; /*  */
+	border-collapse:collapse; /*  */
+	left:0; /*  */
+	top:0; /*  */
+	font-size:12px;/*  */
+}
+
+/* #nav .current a b {background:url("nav_main_left_high.gif") no-repeat 0 -40px; padding-top:15px; color:#963;} */
+
+#nav .current .sub, 
+#nav .select a:hover .sub, 
+#nav .select li:hover .sub { /* 二级综合块悬停显示 */
+	display:block; /* 二级内联元素块状显示 */
+	position:absolute; /* 二级相对位置 */
+	width:900px; /* 二级宽度 */
+	top:40px; /* 相对Y位置 */
+	background:#fff; /* 二级整块背景 */
+	margin-top:0px; /*  */
+	padding:0px 0 0px 0; /* 清除补白 */
+}
+#nav .current .sub li a, 
+#nav .select a:hover .sub li a, 
+#nav .select li:hover .sub li a { /* 二级子块显示 */
+	display:inline; /*  */
+	background:#fff; /*  */
+	border:0px solid #ddd; /*  */
+	padding:0 5px 0 15px; /* 二级子块补白（文字定位） */
+	margin:0 0px 0 0; /*  */
+	width:auto; /*  */
+	white-space:nowrap; /* 文本不换行，直到出现br */
+	font-weight:normal; /* ………… */
+	font-size:12px; /* 二级子菜单文字大小 */
+	height:20px; /* 二级子块高度 */
+	line-height:20px; /* 二级子菜单文字行高 */
+	color: #369; /* 二级子菜单文字颜色 */
+}
+#nav .current .sub .current_sub a, /* 二级当前子块（当前的当前） */
+#nav .current .sub a:hover { /* 一级当前二级子块悬停 */
+	border-color:#aba; /* ………… */
+	background: url(nav_sub_on_1.gif) no-repeat 0 5px; /* 二级子块悬停背景 */
+	color:#f90; /* 文字颜色（橙色） */
+	}
+#nav .sub li a:hover, 
+#nav .select a:hover .sub li a:hover, 
+#nav .select li:hover .sub li a:hover { /* 默认隐藏的二级子块悬停 */
+	border-color:#aba; /* ………… */
+	background: url(nav_sub_on_2.gif) no-repeat 0 5px; color:#a81ef7; /* 默认隐藏的二级子块悬停背景 */
+}
+* html #nav .current .sub, * html #nav .select a:hover .sub { /* hack黑客 */
+	margin-top:0; margin-top:0px; /*  */
+}
+/* 二级各整块定位 */
+#nav .n1 .sub {left: 0px;}
+#nav .n2 .sub {left: -110px;}
+#nav .n3 .sub {left: -220px;}
+#nav .n4 .sub {left: -330px;}
+#nav .n5 .sub {left: -440px;}
+#nav .n6 .sub {left: -550px;}
+#nav .n7 .sub {left: -660px;}
+#nav .n8 .sub {left: -770px;}
+/* 导航菜单结束 */
+/* 导航搜索开始 */
+#search{ /*  */
+	width: 980px; /* 搜索区域宽度 */
+	height: 35px; /* 搜索区域高度 */
+	background: #000 url(nav_bg_high_2.gif) 0 -65px repeat; /* 搜索区域背景 */
+	clear: left; /*  */
+}
+#sch_box{ /*  */
+	text-align: right; /* 搜索框居于右侧 */
+	height: 25px; /* 搜索框高度 */
+}
+#sch_box form{ /*  */
+	height: 25px; /* 定义表单高度使其不超出高度 */
+	margin: 0 100px 0 auto; /* 与右侧保持距离 */
+	padding: 0; /* 清除补白 */
+
+}
+#sch_box img{ /*  */
+	vertical-align: top; /* 搜索按钮上移与搜索框同高 */
+}
+#sch_box #key{ /*  */
+	background-color: #E6F6FB; /* 输入框背景色（淡蓝） */
+	font-weight: bold; /* 输入文字粗体 */
+	color: #8A2BE2; /* 输入文字颜色（紫色） */
+}
+#sch_box select,#sch_box option{ /*  */
+	background-color: #E6F6FB; /* 背景色（淡蓝） */
+}
+/* 导航搜索结束 */
+#main{
+	width: 980px;
+	height: 500px;
+	border:solid 0px #999;
+	margin-top: 10px; 
+}
+#main #left{
+	width: 200px;
+	height: 300px;
+	float: left;
+}
+#main #title{
+    width: 200px;
+	height: 31px;
+	background: url(main_top.gif) no-repeat 0 0;
+}
+#main #box{
+    width: 200px;
+	height: 267px;
+	background: url(main_bottom.gif) repeat-y 0 0;
+}
+ul{
+	margin-top: 0;
+}
+</style>
+<script language="JavaScript" type="text/javascript">
+	function dosearch(){
+		if (document.searchform.key.value=="输入关键字")
+		{
+			skkey="";
+		}
+		else
+		{
+		skkey=document.searchform.key.value;
+		document.searchform.action="http://www.bubujie.com/goodslist.php?catid="+document.searchform.catid.value+"&key="+skkey;
+		document.searchform.submit();
+	    }
+	}
+
+	function show_search(str){
+		if (str=="goods")
+		{   
+		//	var AX=document.all(hideme); //声明一个变量
+			document.all.name_cat.style.display="block";
+			document.all.name_city.style.display="none";
+		}
+		else
+		{// alert("b");
+			document.all.name_cat.style.display="none";
+			document.all.name_city.style.display="block";
+		}
+	}
+</script>
+<body>
+<!-- 页面头部开始 -->
+<div id="top">
+	<div id="left"><a href="http://www.bubujie.com/"><img src="logo.gif" title="步步街--银川网络商城" /></a></div>
+	<div id="center"><!-- 头部中栏区域 --></div>
+	<div id="right">
+		<div id="link_top">
+				<a href="../user_register.php">免费注册</a>
+				<a href="../tologin.php">买家登录</a>
+				<a href="../offerlogin.php">商家登录</a>
+				<a href="../bbs">互助社区</a>
+		</div>
+		<div id="link_bottom"><!-- 头部右栏下部 --></div>
+	</div>
+</div>
+<!-- 页面头部结束 -->
+<!-- 导航菜单开始 -->
+<div id="nav">
+	<ul class="select n1"><li><a href="link.html"><b>首页</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a>热门搜索：</a></li>
+			<li><a href="linka.html"><span>手机充值</span></a></li>
+			<li><a href="linkb.html"><span>索爱</span></a></li>
+			<li><a href="linkc.html"><span>N95</span></a></li>
+			<li><a href="link.html"><span>高跟鞋</span></a></li>
+			<li><a href="link.html"><span>宜家代购</span></a></li>
+			<li><a href="link.html"><span>休闲包</span></a></li>
+			<li><a href="link.html"><span>限时抢购</span></a></li>
+			<li><a href="link.html"><span>韩版</span></a></li>
+			<li><a href="linka.html"><span>电脑桌</span></a></li>
+			<li><a href="linkb.html"><span>外套</span></a></li>
+			<li><a href="linkc.html"><span>沙发床</span></a></li>
+			<li><a href="link.html"><span>二手笔记本</span></a></li>
+			<li><a href="link.html"><span>更多</span></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="select n2"><li><a href="link.html"><b>数码产品</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>电脑硬件/台式电脑/网络设备</span></a></li>
+			<li><a href="link.html"><span>数码相机/摄像机/冲印</span></a></li>
+			<li><a href="link.html"><span>手机</span></a></li>
+			<li><a href="link.html"><span>随身视听/音箱/耳机</span></a></li>
+			<li><a href="link.html"><span>数码配件/电子元件</span></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="current n3"><li><a href="link.html"><b>居家日用</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>Fishermen at Sea</span></a></li>
+			<li><a href="link.html"><span>The Shipwreck</span></a></li>
+			<li class="current_sub"><a href="link.html"><span>The Vale of Ashburnham</span></a></li>
+			<li><a href="link.html"><span>Crossing the Brook</span></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="select n4"><li><a href="link.html"><b>书籍音像</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>The Girl with Green Eyes</span></a></li>
+			<li><a href="link.html"><span>The Dream</span></a></li>
+			<li><a href="link.html"><span>Woman in Blue</span></a></li>
+			<li><a href="link.html"><span>The Yellow Dress</span></a></li>
+			<li><a href="link.html"><span>The Piano Lesson</span></a></li>
+		</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="select n5"><li><a href="link.html"><b>女人</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>彩妆/香水/护肤/保健</span></a></li>
+			<li><a href="link.html"><span>女装/女士精品</span></a></li>
+			<li><a href="link.html"><span>女士箱包/配件</span></a></li>
+			<li><a href="link.html"><span>女鞋</span></a></li>
+			<li><a href="link.html"><span>女士内衣/袜子/泳装</span></a></li>
+			<li><a href="link.html"><span>珠宝首饰/时尚饰品</span></a></li>
+			</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="select n6"><li><a href="link.html"><b>男人</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>男装/男包/服饰配件</span></a></li>
+			<li><a href="link.html"><span>ZIPPO/瑞士军刀/饰品</span></a></li>
+			<li><a href="link.html"><span>Mardi Gras</span></a></li>
+			<li><a href="link.html"><span>Still Life</span></a></li>
+			<li><a href="link.html"><span>Boy in a Red Waistcoat</span></a></li>
+			</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="select n7"><li><a href="link.html"><b>租赁</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>房屋</span></a></li>
+			<li><a href="link.html"><span>会议/办公</span></a></li>
+			<li><a href="link.html"><span>灯光/音响/舞台</span></a></li>
+			<li><a href="link.html"><span>生活/旅游/休闲/运动</span></a></li>
+			<li><a href="link.html"><span>人才租赁</span></a></li>
+			<li><a href="link.html"><span>交通工具</span></a></li>
+			<li><a href="link.html"><span>网络及产品</span></a></li>
+			<li><a href="link.html"><span>机械/建筑</span></a></li>
+			<li><a href="link.html"><span>宴会/服装/礼仪/庆典</span></a></li>
+			</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+
+	<ul class="select n8"><li><a href="link.html"><b>餐饮娱乐</b><!--[if IE 7]><!--></a><!--<![endif]-->
+	<!--[if lte IE 6]><table><tr><td><![endif]-->
+		<ul class="sub">
+			<li><a href="link.html"><span>The Large Bathers</span></a></li>
+			<li><a href="link.html"><span>Onions and Bottles</span></a></li>
+			<li><a href="link.html"><span>Mardi Gras</span></a></li>
+			<li><a href="link.html"><span>Still Life</span></a></li>
+			<li><a href="link.html"><span>Boy in a Red Waistcoat</span></a></li>
+			</ul>
+	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	</li>
+	</ul>
+</div>
+<!-- 导航菜单结束 -->
+<!-- 导航搜索开始 -->
+<div id="search">
+	<div id="sch_box">
+		<form name="searchform" action="http://www.bubujie.com/goodslist.php" method=""  target="_blank">
+
+			<select name="type" onchange="javascript:show_search(this.value);">
+				<option value="goods" selected>&nbsp;搜商品</option>
+				<option value="shop">&nbsp;搜商铺</option>
+			</select> 
+
+			<input name="key" id="key" type="text"  size="40" maxlength="50" onFocus="this.select()" onMouseOver="this.focus()" value="" />
+
+			<select name="catid" size="1" >
+				<option value="0" selected>- --全部分类-- -</option>
+				<option value="1">&nbsp;电脑硬件/台式电脑/网络设备</option>
+				<option value="2">&nbsp;珠宝首饰/时尚饰品</option>
+				<option value="3">&nbsp;手机</option>
+				<option value="4">&nbsp;住宅/商铺/办公楼销售</option>
+				<option value="5">&nbsp;数码相机/摄像机/冲印</option>
+				<option value="6">&nbsp;随身视听/音箱/耳机</option>
+				<option value="7">&nbsp;运动/户外/休闲/健身</option>
+				<option value="8">&nbsp;户外/军品/旅游/机票</option>
+				<option value="9">&nbsp;邮币/古董/字画/收藏</option>
+				<option value="10">&nbsp;汽车/配件/改装/摩托/自行车</option>
+				<option value="11">&nbsp;动漫周边/游戏周边</option>
+				<option value="12">&nbsp;网络游戏虚拟商品</option>
+				<option value="13">&nbsp;彩妆/香水/护肤/保健</option>
+				<option value="14">&nbsp;女装/女士精品</option>
+				<option value="15">&nbsp;女士箱包/配件</option>
+				<option value="16">&nbsp;女鞋</option>
+				<option value="17">&nbsp;ZIPPO/瑞士军刀/饰品</option>
+				<option value="19">&nbsp;男装/男包/服饰配件</option>
+				<option value="20">&nbsp;婴幼/孕妇用品/童装</option>
+				<option value="21">&nbsp;玩具/模型/卡通产品</option>
+				<option value="22">&nbsp;书籍/报纸/杂志</option>
+				<option value="23">&nbsp;宠物/工艺品/礼品/鲜花/明星</option>
+				<option value="24">&nbsp;电影/电视/音乐/曲艺</option>
+				<option value="25">&nbsp;QQ专区</option>
+				<option value="26">&nbsp;女士内衣/袜子/泳装</option>
+				<option value="27">&nbsp;品牌手表/流行手表</option>
+				<option value="28">&nbsp;数码配件/电子元件</option>
+				<option value="29">&nbsp;笔记本电脑</option>
+				<option value="30">&nbsp;网络服务/电脑软件</option>
+				<option value="31">&nbsp;办公设备/文具/耗材</option>
+				<option value="32">&nbsp;保健品/食品/茶叶/特产</option>
+				<option value="33">&nbsp;家电/厨房电器/按摩保健器械</option>
+				<option value="34">&nbsp;家具/宜家代购</option>
+				<option value="35">&nbsp;居家日用/床品/厨房/工艺品</option>
+				<option value="36">&nbsp;装潢/灯具/五金/安防/卫浴</option>
+				<option value="37">&nbsp;手机号码/上网卡</option>
+				<option value="38">&nbsp;租赁业务</option>
+			</select>
+
+			<a href="javascript:dosearch();"><img src="sch_btn_2.gif" width="46" height="25" border="0" align="top" /></a>
+		</form>
+	</div>
+</div>
+<!-- 导航搜索结束 -->
+<div id="main">
+  <div id="left">
+    <div id="title"></div>
+    <div id="box">
+
+	  <ul>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	    <li>测试</li>
+	  </ul>
+	</div>
+  </div>
+
+  <div id="right">
+  fdfgdfg
+  </div>
+</div>
+</body>
+</html>
