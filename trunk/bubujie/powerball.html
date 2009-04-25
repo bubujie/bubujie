@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题 1</title>
+</head>
+
+<body>
+<script language="javascript">
+                function Quickpick()
+                {
+                        var ball
+                        
+                        for( ball = 0; ball < 6; ball++)
+                        {
+                                this[ball] = parseInt((Math.random() * Math.pow(10,16)) % 33) + 1;
+                                for(var list = 0; list < ball; list++)
+                                {
+                                        if(this[list] == this[ball])
+                                        {       
+                                                list = ball;
+                                                ball--;
+                                        }
+                                }
+                        }
+                        this[ball] = parseInt((Math.random() * Math.pow(10,16)) % 16) + 1;
+                        return this;
+                }
+
+        
+
+</script>
+<script language="javascript">
+
+                var idx;
+                var powerball = new Array(7);
+                
+                powerball = this.Quickpick();
+
+                document.write("<center>");
+                document.write("<font size=+2>POWER</font><font size=+2 color=#C00000>BALL</font><br>");        
+                document.write("<hr width=400><font size=+2>");
+                for(idx = 0; idx < 6; idx++)
+                        document.write(powerball[idx] + " - ")
+                document.write("</font><font color=#D00000 size=+2>" + powerball[idx] + "</font>");
+                document.write("</center>");
+</script>
+</body>
+
+</html>

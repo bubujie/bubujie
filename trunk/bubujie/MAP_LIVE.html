@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      <script type="text/javascript" src="http://dev.ditu.live.com/mapcontrol/mapcontrol.ashx?v=6.1"></script>
+
+      <script type="text/javascript">
+         var map = null;
+
+         var LA = new VELatLong(38.47831960913261, 106.21341705322267);
+
+         var pinPoint = null;
+         var pinPixel = null;
+                  
+         function GetMap()
+         {
+            map = new VEMap('myMap');
+            map.LoadMap(LA, 13, VEMapStyle.Road, false, VEMapMode.Mode2D, true, 1);
+
+            AddPin();
+         }
+
+         function getInfo()
+         {
+            var info;
+
+                var center = map.GetCenter();
+
+                info  = "Zoom level:\t" + map.GetZoomLevel() + "\n";
+                info += "Latitude:\t"   + center.Latitude    + "\n";
+                info += "Longitude:\t"  + center.Longitude;
+
+                alert(info);
+         }
+         
+         function AddPin()
+         {
+            // Add a new pushpin to the center of the map.
+            pinPoint = map.GetCenter();
+            pinPixel = map.LatLongToPixel(pinPoint);
+            map.AddPushpin(pinPoint);
+         }
+      </script>
+   </head>
+   <body onload="GetMap();">
+      <div id='myMap' style="position:relative; width:750px; height:500px;"></div>
+       <input id="btnGetInfo" type="button" value="Get Scene Information" name="getinfo" onclick="getInfo();">
+       <br/>
+        (Click to get latitude/longitude and zoom level)
+   </body>
+</html>
