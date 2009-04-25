@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+   <head>
+      <title>Adding a Shape to a Map</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <script type="text/javascript" src="http://dev.ditu.live.com/mapcontrol/mapcontrol.ashx?v=6.1"></script>
+      <script type="text/javascript">
+      var map = null;
+      var points = new Array(
+               new VELatLong(39.01188,116.06687),
+               new VELatLong(39.01534,115.06324),
+               new VELatLong(34.01929,116.06),
+               new VELatLong(34.003,115.05878)
+      );
+
+      function GetMap()
+      {
+         map = new VEMap('myMap');
+         map.LoadMap();
+         var myShapeLayer = new VEShapeLayer();
+         map.AddShapeLayer(myShapeLayer);
+         var myShape = new VEShape(VEShapeType.Polygon, points);
+         myShapeLayer.AddShape(myShape);
+      }
+
+      </script>
+   </head>
+   <body onload="GetMap();">
+      <div id='myMap' style="position:relative; width:600px; height:400px;"></div>
+   </body>
+</html>
