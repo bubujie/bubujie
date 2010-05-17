@@ -1,0 +1,29 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{
+	background: #cccccc;
+}
+.container{
+	background: #cccccc;
+}
+#page_header .container{
+	background: #cccccc;
+}
+#page_body .container{
+	background: #cccccc;
+}
+#page_footer .container{
+	background: #cccccc;
+}
+#page_header, #page_body, #page_footer{
+	background: #cccccc;
+}
+#page_header{
+	background: #cccccc;
+}
+#page_body{
+	background: #cccccc;
+}
+#page_footer{
+	background: #cccccc;
+}
