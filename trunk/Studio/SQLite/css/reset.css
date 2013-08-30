@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.wrapping {width:98%;}
+.bbody .filling {overflow-x:auto;}
+
+body {font-size:0.8em;}
+a img {border:none;}
+table {border-collapse: collapse; border-spacing: 0;}
+p {text-indent:2em;}
+q:before, q:after, blockquote:before, blockquote:after {content: "";}
+h1 {background:url(../img/logo.gif) 100% 50% no-repeat;line-height:50px;margin:0; padding:0;}
+h3 {background:url(../img/icon_Wiki.gif) 0 50% no-repeat;line-height:32px;padding-left:32px;}
+
+#colophon {margin:0;padding:0;background:#FFF;color:#333;}
+#colophon p{text-indent:0;margin:0;font-size:12px;line-height:18px;}
+#colophon p span{display:inline-block;}
+#colophon address{font-family:Verdana;line-height:20px;color:#AFAFAF;margin-left:-3px;}
+#colophon address img{vertical-align:middle;}
+#colophon address a{color:#afafaf;font-family:Tahoma;font-weight:bold;}
+#colophon address a:hover{color:#009bc8;}
+#colophon address span{padding-left:2px;font-family:Verdana;line-height:14px;}
+#colophon address em{padding-left:6px;font-family:Verdana;}
+#colophon address .logo{display:inline-block;*display:inline;vertical-align:top;*vertical-align:baseline;}

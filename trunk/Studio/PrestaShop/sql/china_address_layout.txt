@@ -1,0 +1,10 @@
+lastname firstname
+company
+Country:name
+State:name
+city
+postcode
+address1
+address2
+vat_number
+phone

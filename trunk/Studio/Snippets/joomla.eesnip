@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Folder Name="*Joomla!" Flags="1" ConfigEdit="" ConfigMacro="" ConfigsAssociate="">
+		<Item Name="echo" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="echo   &quot;&quot;.'${0:${SelText}}';" Trigger="echo" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbaseurl" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;?php echo \$this-&gt;baseurl; ?&gt;" Trigger="jbaseurl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbb1st" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php if (\$showBb1st) : ?&gt;
+  &lt;div id=&quot;bb1st&quot;  class=&quot;wrapping &lt;?php if(\$showBb1stSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBb1stAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBb1stSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bb1st-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bb1st-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBb1stAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bb1st-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbb1st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbb5th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="  &lt;div id=&quot;bb5th&quot; class=&quot;wrapping &lt;?php if(\$showSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showSide) : ?&gt;
+      &lt;div id=&quot;side&quot; class=&quot;ning n1&quot;&gt;&lt;a name=&quot;side&quot;&gt;&lt;/a&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;side-top&quot; style=&quot;zen&quot; headerLevel=&quot;3&quot; /&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;side-mid&quot; style=&quot;zen&quot; headerLevel=&quot;3&quot; /&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;side-btm&quot; style=&quot;zen&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div id=&quot;main&quot; class=&quot;ming&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;crumbs&quot; style=&quot;open&quot; headerLevel=&quot;3&quot; /&gt;
+&lt;?php if (\$showComTop) : ?&gt;
+        &lt;div class=&quot;com-top ding&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;com-top&quot; style=&quot;open&quot; /&gt;
+        &lt;/div&gt;
+&lt;?php endif; ?&gt;
+&lt;div id=&quot;component&quot; class=&quot;ding&quot;&gt;
+&lt;jdoc:include type=&quot;message&quot; /&gt;
+&lt;jdoc:include type=&quot;component&quot; /&gt;
+&lt;/div&gt;
+&lt;?php if (\$showComBtm) : ?&gt;
+        &lt;div class=&quot;com-btm ding&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;com-btm&quot; style=&quot;open&quot; /&gt;
+        &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showAside) : ?&gt;
+      &lt;div id=&quot;aside&quot; class=&quot;ning n2&quot;&gt;&lt;a name=&quot;aside&quot;&gt;&lt;/a&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;aside-top&quot; style=&quot;zen&quot; headerLevel=&quot;3&quot; /&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;aside-mid&quot; style=&quot;zen&quot; headerLevel=&quot;3&quot; /&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;aside-btm&quot; style=&quot;zen&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="jbb5th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbb9th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;?php if (\$showBb9th) : ?&gt;
+  &lt;div id=&quot;bb9th&quot;  class=&quot;wrapping &lt;?php if(\$showBb9thSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBb9thAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBb9thSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bb9th-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bb9th-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBb9thAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bb9th-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbb9th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbf1st" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php if (\$showBf1st) : ?&gt;
+  &lt;div id=&quot;bf1st&quot;  class=&quot;wrapping &lt;?php if(\$showBf1stSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBf1stAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBf1stSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf1st-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf1st-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBf1stAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf1st-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbf1st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbf5th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php if (\$showBf5th) : ?&gt;
+  &lt;div id=&quot;bf5th&quot;  class=&quot;wrapping &lt;?php if(\$showBf5thSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBf5thAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBf5thSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf5th-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf5th-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBf5thAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf5th-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbf5th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbf9th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php if (\$showBf9th) : ?&gt;
+  &lt;div id=&quot;bf9th&quot;  class=&quot;wrapping &lt;?php if(\$showBf9thSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBf9thAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBf9thSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf9th-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf9th-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBf9thAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bf9th-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbf9th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbh1st" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php if (\$showBh1st) : ?&gt;
+  &lt;div id=&quot;bh1st&quot;  class=&quot;wrapping &lt;?php if(\$showBh1stSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBh1stAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBh1stSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh1st-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh1st-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBh1stAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh1st-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbh1st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbh5th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;?php if (\$showBh5th) : ?&gt;
+  &lt;div id=&quot;bh5th&quot;  class=&quot;wrapping &lt;?php if(\$showBh5thSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBh5thAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBh5thSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh5th-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh5th-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBh5thAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh5th-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbh5th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jbh9th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php if (\$showBh9th) : ?&gt;
+  &lt;div id=&quot;bh9th&quot;  class=&quot;wrapping &lt;?php if(\$showBh9thSide){ echo 'n'; } ?&gt;m&lt;?php if(\$showBh9thAside){ echo 'n'; } ?&gt;&quot;&gt;
+    &lt;div class=&quot;filling&quot;&gt;
+&lt;?php if (\$showBh9thSide) : ?&gt;
+      &lt;div class=&quot;ning n1 side&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh9th-side&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+      &lt;div class=&quot;ming main&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh9th-main&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php if (\$showBh9thAside) : ?&gt;
+      &lt;div class=&quot;ning n2 aside&quot;&gt;
+&lt;jdoc:include type=&quot;modules&quot; name=&quot;bh9th-aside&quot; style=&quot;div&quot; headerLevel=&quot;3&quot; /&gt;
+      &lt;/div&gt;
+&lt;?php endif; ?&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;?php endif; ?&gt;" Trigger="jbh9th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jisHome" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\$isHome = 0;
+\$menu = &amp;JSite::getMenu();
+if (\$menu-&gt;getActive() == \$menu-&gt;getDefault()) :
+	\$isHome = 1;
+endif;" Trigger="$ishome" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jquick" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="      &lt;div class=&quot;quick&quot; style=&quot;position:absolute;right:10px;top:0;&quot;&gt;
+        &lt;a href=&quot;&lt;?php echo \$this-&gt;baseurl; ?&gt;&quot;&gt;&lt;img src=&quot;&lt;?php echo \$this-&gt;baseurl; ?&gt;/templates/&lt;?php echo \$this-&gt;template;?&gt;/img/btn_home.gif&quot; alt=&quot;首页&quot; /&gt;&lt;/a&gt;
+        &lt;a href=&quot;javascript:history.back();&quot;&gt;&lt;img src=&quot;&lt;?php echo \$this-&gt;baseurl; ?&gt;/templates/&lt;?php echo \$this-&gt;template;?&gt;/img/btn_back.gif&quot; alt=&quot;后退&quot; /&gt;&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;&lt;?php echo \$this-&gt;baseurl; ?&gt;/templates/&lt;?php echo \$this-&gt;template;?&gt;/img/btn_top.gif&quot; alt=&quot;页眉&quot; /&gt;&lt;/a&gt;
+      &lt;/div&gt;" Trigger="jquick" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jtplcss" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo \$this-&gt;baseurl; ?&gt;/templates/&lt;?php echo \$this-&gt;template; ?&gt;/css/prettify.css&quot; type=&quot;text/css&quot; media=&quot;screen,projection&quot; /&gt;" Trigger="jtplcss" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jtplfolder" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;?php echo \$this-&gt;template; ?&gt;" Trigger="jtplfolder" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="jtpljs" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php echo \$this-&gt;baseurl; ?&gt;/templates/&lt;?php echo \$this-&gt;template; ?&gt;/js/prettify.js&quot;&gt;&lt;/script&gt;" Trigger="jtpljs" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="printf" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="printf(&quot;&quot;.'${0:${SelText}}' ,
+	$0
+);" Trigger="printf" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+</SnippetTree>
+</Snippets>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Folder Name="*PHP" Flags="1" ConfigEdit="" ConfigMacro="" ConfigsAssociate="">
+		<Item Name="&lt;?php ?&gt;" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;?php ${0} ?&gt;" Trigger="&lt;?" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+</SnippetTree>
+</Snippets>
