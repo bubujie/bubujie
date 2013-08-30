@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Folder Name="*SQL" Flags="1" ConfigEdit="" ConfigMacro="" ConfigsAssociate="">
+		<Item Name="SELECT" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="SELECT ${1:*} FROM ${2:table}${0: WHERE ${3:col}=${4:value}};" Trigger="select" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="INSERT" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="INSERT INTO ${1:table} (${2:id, name}) VALUES (${3:'','xxx'})${0:,(${4:'','xxxxxxx'})};" Trigger="insert" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+</SnippetTree>
+</Snippets>

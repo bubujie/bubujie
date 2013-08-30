@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+<!-- //
+//韩式滚动
+function initMoving(target, topPosition, topLimit, btmLimit) {
+
+	if (!target)
+		return false;
+
+	var obj = target;
+	obj.initTop = topPosition;
+	obj.topLimit = topLimit;
+	obj.bottomLimit = document.documentElement.scrollHeight - btmLimit;
+
+	obj.style.position = "absolute";
+	obj.top = obj.initTop;
+	obj.left = obj.initLeft;
+	obj.style.top = obj.top + "px";
+
+	obj.getTop = function() {
+		if (document.documentElement.scrollTop) {
+			return document.documentElement.scrollTop;
+		} else if (window.pageYOffset) {
+			return window.pageYOffset;
+		} else {
+			return 0;
+		}
+	}
+	obj.getHeight = function() {
+		if (self.innerHeight) {
+			return self.innerHeight;
+		} else if(document.documentElement.clientHeight) {
+			return document.documentElement.clientHeight;
+		} else {
+			return 500;
+		}
+	}
+	obj.move = setInterval(function() {
+		//pos = obj.getTop() + obj.getHeight() / 2 - 15;
+		pos = obj.getTop() + topPosition;
+
+		if (pos > obj.bottomLimit)
+			pos = obj.bottomLimit
+		if (pos < obj.topLimit)
+			pos = obj.topLimit
+
+		interval = obj.top - pos;
+		obj.top = obj.top - interval / 3;
+		obj.style.top = obj.top + "px";
+	}, 30)
+	
+}
+//简易滚动
+window.onload = function(){
+    initMoving(document.getElementById("gotop"), 50, 50, 20);
+}
+// -->
+</script>
+</head>
+<body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id="gotop" style="border: solid 1px #000;"> test </div>
+<div id="quick">
+		<img src="/images/shop_quick.gif" width="90" height="210" alt="" usemap="#shop_quick" /><br />
+</div>
+	
+	<!-- 위치 변경하면 안됨 -->
+	<script type="text/javascript" language="JavaScript">
+		initMoving(document.getElementById("quick"), 1, 186, 260);
+	</script>
+
+</body>
+</html>

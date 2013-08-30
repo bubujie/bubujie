@@ -1,0 +1,60 @@
+﻿@charset "utf-8";
+/* Fixed L Mode copyright(c)bubujie.net */
+/* ######### ######### ######### BEGIN::Fixed ######### ######### ######### */
+/* Ding */
+.ding { position:relative; *zoom:1; }
+.ding:after { content:""; display:block; clear:both; }
+/* Body & bHead & bBody & bFoot */
+body { margin:0; padding:0; }
+#bhead, #bbody, #bfoot { position:relative; clear:both; *zoom:1; }
+#bhead:after, #bbody:after, #bfoot:after { content:""; display:block; clear:both; }
+/* Wrapping & Filling */
+.wrapping, .filling { position:relative; clear:both; *zoom:1; }
+.wrapping:after, .filling:after { content:""; display:block; clear:both; }
+/* Width */
+.wrapping { width:950px; margin-left:auto; margin-right:auto; }
+/* Align */
+.lefting .wrapping { margin-left:0; }
+.righting .wrapping { margin-right:0; }
+/* Ming & Ning */
+.ming, .ning { position:relative; overflow:hidden; *zoom:1; }
+.ming:after, .ning:after { content:""; display:block; clear:both; }
+/* bHead & bFoot */
+#bhead ul, #bfoot ul { position:relative; }
+#bhead li, #bfoot li { position:relative; float:left; list-style:none; }
+/* bBody */
+#bbody .ning .section { position:relative; }
+/* Fixed M */
+.m .n1 { margin-right:-25px; }
+.m .n1 .section { float:left; width:300px; margin-right:25px; }
+/* Fixed MN */
+.mn .ming { width:750px; float:left; }
+.mn .n1 { width:190px; float:right; }
+/* Fixed NM */
+.nm .ming { width:750px; float:right; }
+.nm .n1 { width:190px; float:left; }
+/* Fixed MNN */
+.mnn .ming { width:550px; float:left; margin-right:10px; }
+.mnn .n1, .mnn .n2 { width:190px; }
+.mnn .n1 { float:left; }
+.mnn .n2 { float:right; }
+/* Fixed NMN */
+.nmn .ming { width:550px; float:left; margin-right:-100%; left:200px; }
+.nmn .n1, .nmn .n2 { width:190px; }
+.nmn .n1 { float:left; }
+.nmn .n2 { float:right; }
+/* Fixed NNM */
+.nnm .ming { width:550px; float:right; }
+.nnm .n1, .nnm .n2 { width:190px; }
+.nnm .n1 { float:left; margin-right:10px; }
+.nnm .n2 { float:left; }
+/* X (Horizontal) */
+.xcl { clear:left; }
+.xcr { clear:right; }
+.xcb { clear:both; }
+.xfl { float:left; }
+.xfr { float:right; }
+.xfc { margin-left:auto; margin-right:auto; }
+/* Blank */
+.blank { height:5px; line-height:5px; clear:both; visibility:hidden; }
+/* ######### ######### ######### END::Fixed ######### ######### ######### */

@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Folder Name="*Tuding" Flags="1" ConfigEdit="" ConfigMacro="" ConfigsAssociate="">
+		<Folder Name="*Comment" Flags="1" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\">
+			<Item Name="CSS注释" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* ${0:注释} */" Trigger="ccss" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="CSS注释(始-末)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* BEGIN::${1:注释} */
+${0:${TM_SELECTED_TEXT}}
+/* END::${1:注释} */" Trigger="ccssbe" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="CSS注释1级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* ######### ######### ######### ${0:注释} ######### ######### ######### */" Trigger="ccss1" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="CSS注释2级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* ######### ######### ${0:注释} ######### ######### */" Trigger="ccss2" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="CSS注释3级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* ######### ${0:注释} ######### */" Trigger="ccss3" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="CSS注释4级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* ### ${0:注释} ### */" Trigger="ccss4" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="CSS注释5级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* # ${0:注释} # */" Trigger="ccss5" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- ${0:注释} --&gt;" Trigger="chtm" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释(始-末)" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- BEGIN::${1:注释} --&gt;
+${0:${TM_SELECTED_TEXT}}
+&lt;!-- END::${1:注释} --&gt;" Trigger="chtmbe" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释1级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- ######### ######### ######### ${0:注释} ######### ######### ######### --&gt;" Trigger="chtm1" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释2级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- ######### ######### ${0:注释} ######### ######### --&gt;" Trigger="chtm2" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释3级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- ######### ${0:注释} ######### --&gt;" Trigger="chtm3" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释4级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- ### ${0:注释} ### --&gt;" Trigger="chtm4" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="HTML注释5级" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- # ${0:注释} # --&gt;" Trigger="chtm5" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		</Folder>
+		<Folder Name="*Wrap" Flags="1" ConfigEdit="" ConfigMacro="" ConfigsAssociate="">
+			<Item Name="*InnerWrap" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="/* Inner MN */
+.ming .mn .fill { padding-right:200px; }
+.ming .mn .ming { float:left; width:100%; }
+.ming .mn .n1, .ming .mn .n2 { width:200px; float:right; margin-left:-200px; right:-200px; } /*add(.mn .n2)*/
+/* Inner NM */
+.ming .nm .fill { padding-left:200px; }
+.ming .nm .ming { float:right; width:100%; }
+.ming .nm .n1, .ming .nm .n2 { width:200px; float:left; margin-right:-200px; left:-200px; } /*add(.nm .n2)*/
+/* Inner MNN */
+.ming .mnn .fill { padding-right:400px; }
+.ming .mnn .ming { float:left; width:100%; }
+.ming .mnn .n1 { float:right; width:200px; margin-left:-200px; right:-200px; }
+.ming .mnn .n2 { float:right; width:200px; margin-left:-200px; right:-400px; }
+/* Inner NMN */
+.ming .nmn .fill { padding-left:200px; padding-right:200px; }
+.ming .nmn .ming { float:left; margin-right:-100%; width:100%; }
+.ming .nmn .n1 { float:left; width:200px; margin-right:-200px; left:-200px; }
+.ming .nmn .n2 { float:right; width:200px; margin-left:-200px; right:-200px; }
+/* Inner NNM */
+.ming .nnm .fill { padding-left:400px; }
+.ming .nnm .ming { float:right; width:100%; }
+.ming .nnm .n1 { float:left; width:200px; margin-right:-200px; left:-400px; }
+.ming .nnm .n2 { float:left; width:200px; margin-right:-200px; left:-200px; }" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="*InnerWrapReset" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="	.ming .mn  .ming, .ming .mn  .n1, .ming .mn  .n2,
+	.ming .nm  .ming, .ming .nm  .n1, .ming .nm  .n2,
+	.ming .mnn .ming, .ming .mnn .n1, .ming .mnn .n2,
+	.ming .nmn .ming, .ming .nmn .n1, .ming .nmn .n2,
+	.ming .nnm .ming, .ming .nnm .n1, .ming .nnm .n2 {
+		width:auto; float:none; margin:0; left:0; right:0; clear:both;
+	}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="*tuding" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;div id=&quot;bhead&quot;&gt;
+  ${1:&lt;div id=&quot;bh1st&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+  ${2:&lt;div id=&quot;bh5th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+  ${3:&lt;div id=&quot;bh9th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+&lt;/div&gt;
+&lt;!-- ######### ######### ######### bbody ######### ######### ######### --&gt;
+&lt;div id=&quot;bbody&quot;&gt;
+  ${4:&lt;div id=&quot;bb1st&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+  ${5:&lt;div id=&quot;bb5th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+  ${6:&lt;div id=&quot;bb9th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+&lt;/div&gt;
+&lt;!-- ######### ######### ######### /bbody ######### ######### ######### --&gt;
+&lt;div id=&quot;bfoot&quot;&gt;
+  ${7:&lt;div id=&quot;bf1st&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+  ${8:&lt;div id=&quot;bf5th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+  ${9:&lt;div id=&quot;bf9th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;}
+&lt;/div&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bb1st" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bb1st&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bb1st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bb5th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bb5th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bb5th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bb9th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bb9th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bb9th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bbody" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;div id=&quot;bbody&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+&lt;/div&gt;" Trigger="bbody" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bf1st" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bf1st&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bf1st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bf5th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bf5th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bf5th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bf9th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bf9th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bf9th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bfoot" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;!-- ######### ######### ######### /bbody ######### ######### ######### --&gt;
+&lt;div id=&quot;bfoot&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+&lt;/div&gt;" Trigger="bfoot" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bh1st" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bh1st&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bh1st" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bh5th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bh5th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bh5th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bh9th" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="  &lt;div id=&quot;bh9th&quot;&gt;
+    &lt;div class=&quot;wrapping&quot;&gt;
+      &lt;div class=&quot;filling&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;" Trigger="bh9th" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+			<Item Name="bhead" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;div id=&quot;bhead&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+&lt;/div&gt;
+&lt;!-- ######### ######### ######### bbody ######### ######### ######### --&gt;" Trigger="bhead" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		</Folder>
+		<Item Name="Colophon" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="&lt;div class=&quot;colophon&quot;&gt;&lt;a href=&quot;http://www.bubujie.net/&quot; title=&quot;步步街网络服务中心&quot;&gt;&lt;/a&gt; 备案号 : 宁ICP备08000324号 / 工商注册号: 640106600104023&lt;br /&gt;
+  联系地址: 银川市金凤区灵芝巷盈南市民农园北158号&lt;br /&gt;
+  手机: 15809503950 / 电话: 0951-5171019 &lt;br /&gt;
+  &lt;span&gt;Copyright © 步步街 2008 - 2012 All Rights Reserved. Contact &lt;a href=&quot;mailto:bubujie@gmail.com&quot;&gt;webmaster&lt;/a&gt; for more information &lt;/span&gt;
+&lt;/div&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Color" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="${PickColor}" Trigger="color" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-a:LoVe/HAte" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="/* LoVe/HAte(爱恨原则) */
+${1:selecter }a:link{}
+${1:selecter }a:visited{}
+${1:selecter }a:hover{}
+${1:selecter }a:active{}
+${1:selecter }a:link, ${1:selecter }a:visited, ${1:selecter }a:hover, ${1:selecter }a:active{}" Trigger="lovehate" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Fixed-L" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;外套的像素宽度（无需单位）&quot;, &quot;960&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW  + &quot;px&quot;;
+		var sAndAsWidth   = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		var main2ColWidth = parseInt(wrapW) - parseInt(asideW) + &quot;px&quot;;
+		var main3ColWidth = parseInt(wrapW) - parseInt(sideW) - parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* Fixed L Mode - Tuding Layout System v4.0 - copyright(c)bubujie.net */');
+		document.writeln('/* ######### ######### ######### BEGIN::Fixed L ######### ######### ######### */');
+		//document.writeln('/* Body */');
+		document.writeln('body { margin:0; padding:0; }');
+		//document.writeln('/* bHead &amp; bBody &amp; bFoot &amp; Wrapping &amp; Filling &amp; Wrap &amp; Fill */');
+		document.writeln('#bhead, #bbody, #bfoot, .wrapping, .filling, .wrap, .fill { position:relative; clear:both; *zoom:1; }');
+		document.writeln('#bhead:after, #bbody:after, #bfoot:after, .wrapping:after, .filling:after, .wrap:after, .fill:after { content:&quot;&quot;; display:block; clear:both; }');
+		//document.writeln('/* Wrapping width */');
+		document.writeln('.wrapping { width:'+wrapWidth+'; margin-left:auto; margin-right:auto; }');
+		//document.writeln('/* Wrapping align */');
+		document.writeln('.lefting .wrapping { margin-left:0; }');
+		document.writeln('.righting .wrapping { margin-right:0; }');
+		//document.writeln('/* Ming &amp; Ning &amp; Wing &amp; Ving &amp; Ding */');
+		document.writeln('.ming, .n1, .n2, .wing, .v1, .v2, .ding { position:relative; *zoom:1; }');
+		document.writeln('.ming:after, .n1:after, .n2:after, .wing:after, .v1:after, .v2:after, .ding:after { content:&quot;&quot;; display:block; clear:both; }');
+		//document.writeln('/* bHead li &amp; bFoot li */');
+		document.writeln('#bhead ul, #bfoot ul { position:relative; }');
+		document.writeln('#bhead li, #bfoot li { position:relative; float:left; list-style:none; }');
+		//document.writeln('/* Fixed M */');
+		document.writeln('.m .ming {  }');
+		//document.writeln('/* Fixed MN */');
+		document.writeln('.mn .ming { width:'+main2ColWidth+'; float:left; }');
+		document.writeln('.mn .n1, .mn .n2 { width:'+sideWidth+'; float:right; } /*add(.mn .n2)*/');
+		//document.writeln('/* Fixed NM */');
+		document.writeln('.nm .ming { width:'+main2ColWidth+'; float:right; }');
+		document.writeln('.nm .n1, .nm .n2 { width:'+sideWidth+'; float:left; } /*add(.nm .n2)*/');
+		//document.writeln('/* Fixed MNN */');
+		document.writeln('.mnn .ming { width:'+main3ColWidth+'; float:left; margin-right:0px; }');
+		document.writeln('.mnn .n1 { width:'+sideWidth+'; float:left; }');
+		document.writeln('.mnn .n2 { width:'+asideWidth+'; float:right; }');
+		//document.writeln('/* Fixed NMN */');
+		document.writeln('.nmn .ming { width:'+main3ColWidth+'; float:left; margin-right:-100%; left:'+sideWidth+'; }');
+		document.writeln('.nmn .n1 { width:'+sideWidth+'; float:left; }');
+		document.writeln('.nmn .n2 { width:'+asideWidth+'; float:right; }');
+		//document.writeln('/* Fixed NNM */');
+		document.writeln('.nnm .ming { width:'+main3ColWidth+'; float:right; }');
+		document.writeln('.nnm .n1 { width:'+sideWidth+'; float:left; margin-right:0px; }');
+		document.writeln('.nnm .n2 { width:'+asideWidth+'; float:left; }');
+		//document.writeln('/* Width */');
+		document.writeln('.wrapping .w-1     {  }');
+		document.writeln('.wrapping .w-1-2   { width:50%; }');
+		document.writeln('.wrapping .w-1-3   { width:33.33333%; }');
+		document.writeln('.wrapping .w-2-3   { width:66.66666%; }');
+		document.writeln('.wrapping .w-1-4   { width:25%; }');
+		document.writeln('.wrapping .w-3-4   { width:75%; }');
+		document.writeln('.wrapping .w-1-5   { width:20%; }');
+		document.writeln('.wrapping .w-2-5   { width:40%; }');
+		document.writeln('.wrapping .w-3-5   { width:60%; }');
+		document.writeln('.wrapping .w-4-5   { width:80%; }');
+		document.writeln('.wrapping .w-1-6   { width:16.656%; }');
+		document.writeln('.wrapping .w-5-6   { width:83.33%; }');
+		document.writeln('.wrapping .w-1-8   { width:12.5%; }');
+		document.writeln('.wrapping .w-3-8   { width:37.5%; }');
+		document.writeln('.wrapping .w-5-8   { width:62.5%; }');
+		document.writeln('.wrapping .w-7-8   { width:87.5%; }');
+		document.writeln('.wrapping .w-1-12  { width:8.3333%; }');
+		document.writeln('.wrapping .w-5-12  { width:41.6666%; }');
+		document.writeln('.wrapping .w-7-12  { width:58.3333%; }');
+		document.writeln('.wrapping .w-11-12 { width:91.6666%; }');
+		document.writeln('.wrapping .w-1-24  { width:4.1666%; }');
+		document.writeln('.wrapping .w-5-24  { width:20.8333%; }');
+		document.writeln('.wrapping .w-7-24  { width:29.1666%; }');
+		document.writeln('.wrapping .w-11-24 { width:45.8333%; }');
+		document.writeln('.wrapping .w-13-24 { width:54.1666%; }');
+		document.writeln('.wrapping .w-17-24 { width:70.8333%; }');
+		document.writeln('.wrapping .w-19-24 { width:79.1666%; }');
+		document.writeln('.wrapping .w-23-24 { width:95.8333%; }');
+		//document.writeln('/* X (Horizontal) */');
+		document.writeln('.xcn { clear:none; }');
+		document.writeln('.xcl { clear:left; }');
+		document.writeln('.xcr { clear:right; }');
+		document.writeln('.xcb { clear:both; }');
+		document.writeln('.xfn { float:none; }');
+		document.writeln('.xfl { float:left; }');
+		document.writeln('.xfr { float:right; }');
+		document.writeln('.xfc { margin-left:auto; margin-right:auto; }');
+		document.writeln('/* ######### ######### ######### END::Fixed L ######### ######### ######### */');
+	}
+}
+" Trigger="cssfl" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Fixed-L-Reset" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;外套的像素宽度（无需单位）&quot;, &quot;960&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW  + &quot;px&quot;;
+		var sAndAsWidth   = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		var main2ColWidth = parseInt(wrapW) - parseInt(asideW) + &quot;px&quot;;
+		var main3ColWidth = parseInt(wrapW) - parseInt(sideW) - parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* ######### BEGIN::Fixed L Reset ######### */');
+		document.writeln('.wrapping { width:'+wrapWidth+'; }');
+		//document.writeln('/* Fixed M */');
+		document.writeln('.m .ming {  }');
+		//document.writeln('/* Fixed MN */');
+		document.writeln('.mn .ming { width:'+main2ColWidth+'; }');
+		document.writeln('.mn .n1, .mn .n2 { width:'+sideWidth+'; } /*add(.mn .n2)*/');
+		//document.writeln('/* Fixed NM */');
+		document.writeln('.nm .ming { width:'+main2ColWidth+'; }');
+		document.writeln('.nm .n1, .nm .n2 { width:'+sideWidth+'; } /*add(.nm .n2)*/');
+		//document.writeln('/* Fixed MNN */');
+		document.writeln('.mnn .ming { width:'+main3ColWidth+'; }');
+		document.writeln('.mnn .n1 { width:'+sideWidth+'; }');
+		document.writeln('.mnn .n2 { width:'+asideWidth+'; }');
+		//document.writeln('/* Fixed NMN */');
+		document.writeln('.nmn .ming { width:'+main3ColWidth+'; left:'+sideWidth+'; }');
+		document.writeln('.nmn .n1 { width:'+sideWidth+'; }');
+		document.writeln('.nmn .n2 { width:'+asideWidth+'; }');
+		//document.writeln('/* Fixed NNM */');
+		document.writeln('.nnm .ming { width:'+main3ColWidth+'; }');
+		document.writeln('.nnm .n1 { width:'+sideWidth+'; }');
+		document.writeln('.nnm .n2 { width:'+asideWidth+'; }');
+		document.writeln('/* ######### END::Fixed L Reset ######### */');
+	}
+}
+" Trigger="cssflreset" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Fixed-T&amp;7" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;外套的像素宽度（无需单位）&quot;, &quot;960&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW  + &quot;px&quot;;
+		var sAndAsWidth   = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		var main2ColWidth = parseInt(wrapW) - parseInt(asideW) + &quot;px&quot;;
+		var main3ColWidth = parseInt(wrapW) - parseInt(sideW) - parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* Fixed T&amp;7 Mode - Tuding Layout System v4.0 - copyright(c)bubujie.net */');
+		document.writeln('/* ######### ######### ######### BEGIN::Fixed T&amp;7 ######### ######### ######### */');
+		//document.writeln('/* Body */');
+		document.writeln('body { margin:0; padding:0; }');
+		//document.writeln('/* bHead &amp; bBody &amp; bFoot &amp; Wrapping &amp; Filling &amp; Wrap &amp; Fill */');
+		document.writeln('#bhead, #bbody, #bfoot, .wrapping, .filling, .wrap, .fill { position:relative; clear:both; *zoom:1; }');
+		document.writeln('#bhead:after, #bbody:after, #bfoot:after, .wrapping:after, .filling:after, .wrap:after, .fill:after { content:&quot;&quot;; display:block; clear:both; }');
+		//document.writeln('/* Wrapping width */');
+		document.writeln('.wrapping { width:'+wrapWidth+'; margin-left:auto; margin-right:auto; }');
+		//document.writeln('/* Wrapping align */');
+		document.writeln('.lefting .wrapping { margin-left:0; }');
+		document.writeln('.righting .wrapping { margin-right:0; }');
+		//document.writeln('/* Ming &amp; Ning &amp; Wing &amp; Ving &amp; Ding */');
+		document.writeln('.ming, .n1, .n2, .wing, .v1, .v2, .ding { position:relative; *zoom:1; }');
+		document.writeln('.ming:after, .n1:after, .n2:after, .wing:after, .v1:after, .v2:after, .ding:after { content:&quot;&quot;; display:block; clear:both; }');
+		//document.writeln('/* bHead li &amp; bFoot li */');
+		document.writeln('#bhead ul, #bfoot ul { position:relative; }');
+		document.writeln('#bhead li, #bfoot li { position:relative; float:left; list-style:none; }');
+		//document.writeln('/* Fixed M */');
+		document.writeln('.m .ming {  }');
+		//document.writeln('/* Fixed MN */');
+		document.writeln('.mn .n1, .mn .n2 { width:'+sideWidth+'; float:right; } /*add(.mn .n2)*/');
+		document.writeln('.mn .ming { width:'+main2ColWidth+'; float:left; }');
+		//document.writeln('/* Fixed NM */');
+		document.writeln('.nm .n1, .nm .n2 { width:'+sideWidth+'; float:left; } /*add(.nm .n2)*/');
+		document.writeln('.nm .ming { width:'+main2ColWidth+'; float:right; }');
+		//document.writeln('/* Fixed MNN */');
+		document.writeln('.mnn .n1 { width:'+sideWidth+'; float:left; margin-right:-100%; left:'+main3ColWidth+'; }');
+		document.writeln('.mnn .ming { width:'+main3ColWidth+'; float:left; }');
+		document.writeln('.mnn .n2 { width:'+asideWidth+'; float:right; }');
+		//document.writeln('/* Fixed NMN */');
+		document.writeln('.nmn .n1 { width:'+sideWidth+'; float:left; margin-right:0px; }');
+		document.writeln('.nmn .ming { width:'+main3ColWidth+'; float:left; }');
+		document.writeln('.nmn .n2 { width:'+asideWidth+'; float:right; }');
+		//document.writeln('/* Fixed NNM */');
+		document.writeln('.nnm .n1 { width:'+sideWidth+'; float:left; margin-right:0px; }');
+		document.writeln('.nnm .ming { width:'+main3ColWidth+'; float:right; }');
+		document.writeln('.nnm .n2 { width:'+asideWidth+'; float:left; }');
+		//document.writeln('/* Width */');
+		document.writeln('.wrapping .w-1     {  }');
+		document.writeln('.wrapping .w-1-2   { width:50%; }');
+		document.writeln('.wrapping .w-1-3   { width:33.33333%; }');
+		document.writeln('.wrapping .w-2-3   { width:66.66666%; }');
+		document.writeln('.wrapping .w-1-4   { width:25%; }');
+		document.writeln('.wrapping .w-3-4   { width:75%; }');
+		document.writeln('.wrapping .w-1-5   { width:20%; }');
+		document.writeln('.wrapping .w-2-5   { width:40%; }');
+		document.writeln('.wrapping .w-3-5   { width:60%; }');
+		document.writeln('.wrapping .w-4-5   { width:80%; }');
+		document.writeln('.wrapping .w-1-6   { width:16.656%; }');
+		document.writeln('.wrapping .w-5-6   { width:83.33%; }');
+		document.writeln('.wrapping .w-1-8   { width:12.5%; }');
+		document.writeln('.wrapping .w-3-8   { width:37.5%; }');
+		document.writeln('.wrapping .w-5-8   { width:62.5%; }');
+		document.writeln('.wrapping .w-7-8   { width:87.5%; }');
+		document.writeln('.wrapping .w-1-12  { width:8.3333%; }');
+		document.writeln('.wrapping .w-5-12  { width:41.6666%; }');
+		document.writeln('.wrapping .w-7-12  { width:58.3333%; }');
+		document.writeln('.wrapping .w-11-12 { width:91.6666%; }');
+		document.writeln('.wrapping .w-1-24  { width:4.1666%; }');
+		document.writeln('.wrapping .w-5-24  { width:20.8333%; }');
+		document.writeln('.wrapping .w-7-24  { width:29.1666%; }');
+		document.writeln('.wrapping .w-11-24 { width:45.8333%; }');
+		document.writeln('.wrapping .w-13-24 { width:54.1666%; }');
+		document.writeln('.wrapping .w-17-24 { width:70.8333%; }');
+		document.writeln('.wrapping .w-19-24 { width:79.1666%; }');
+		document.writeln('.wrapping .w-23-24 { width:95.8333%; }');
+		//document.writeln('/* X (Horizontal) */');
+		document.writeln('.xcn { clear:none; }');
+		document.writeln('.xcl { clear:left; }');
+		document.writeln('.xcr { clear:right; }');
+		document.writeln('.xcb { clear:both; }');
+		document.writeln('.xfn { float:none; }');
+		document.writeln('.xfl { float:left; }');
+		document.writeln('.xfr { float:right; }');
+		document.writeln('.xfc { margin-left:auto; margin-right:auto; }');
+		document.writeln('/* ######### ######### ######### END::Fixed T&amp;7 ######### ######### ######### */');
+	}
+}
+" Trigger="cssft7" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Fixed-T&amp;7-Reset" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（无需单位）&quot;, &quot;200&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;外套的像素宽度（无需单位）&quot;, &quot;960&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW  + &quot;px&quot;;
+		var sAndAsWidth   = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		var main2ColWidth = parseInt(wrapW) - parseInt(asideW) + &quot;px&quot;;
+		var main3ColWidth = parseInt(wrapW) - parseInt(sideW) - parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* ######### BEGIN::Fixed T&amp;7 Reset ######### */');
+		document.writeln('.wrapping { width:'+wrapWidth+'; }');
+		//document.writeln('/* Fixed M */');
+		document.writeln('.m .ming {  }');
+		//document.writeln('/* Fixed MN */');
+		document.writeln('.mn .n1, .mn .n2 { width:'+sideWidth+'; } /*add(.mn .n2)*/');
+		document.writeln('.mn .ming { width:'+main2ColWidth+'; }');
+		//document.writeln('/* Fixed NM */');
+		document.writeln('.nm .n1, .nm .n2 { width:'+sideWidth+'; } /*add(.nm .n2)*/');
+		document.writeln('.nm .ming { width:'+main2ColWidth+'; }');
+		//document.writeln('/* Fixed MNN */');
+		document.writeln('.mnn .n1 { width:'+sideWidth+'; left:'+main3ColWidth+'; }');
+		document.writeln('.mnn .ming { width:'+main3ColWidth+'; }');
+		document.writeln('.mnn .n2 { width:'+asideWidth+'; }');
+		//document.writeln('/* Fixed NMN */');
+		document.writeln('.nmn .n1 { width:'+sideWidth+'; }');
+		document.writeln('.nmn .ming { width:'+main3ColWidth+'; }');
+		document.writeln('.nmn .n2 { width:'+asideWidth+'; }');
+		//document.writeln('/* Fixed NNM */');
+		document.writeln('.nnm .n1 { width:'+sideWidth+'; }');
+		document.writeln('.nnm .ming { width:'+main3ColWidth+'; }');
+		document.writeln('.nnm .n2 { width:'+asideWidth+'; }');
+		document.writeln('/* ######### BEGIN::Fixed T&amp;7 Reset ######### */');
+	}
+}
+" Trigger="cssft7reset" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Hybrid" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（无需单位）&quot;, &quot;240&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（无需单位）&quot;, &quot;240&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;外套的宽度（像素值、百分比或值“auto”，需要单位）&quot;, &quot;auto&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW;
+		var sAndAsWidth = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* Hybrid Mode - Tuding Layout System v4.0 - copyright(c)bubujie.net */');
+		document.writeln('/* ######### ######### ######### BEGIN::Hybrid ######### ######### ######### */');
+		//document.writeln('/* Body */');
+		document.writeln('body { margin:0; padding:0; }');
+		//document.writeln('/* bHead &amp; bBody &amp; bFoot &amp; Wrapping &amp; Filling &amp; Wrap &amp; Fill */');
+		document.writeln('#bhead, #bbody, #bfoot, .wrapping, .filling, .wrap, .fill { position:relative; clear:both; *zoom:1; }');
+		document.writeln('#bhead:after, #bbody:after, #bfoot:after, .wrapping:after, .filling:after, .wrap:after, .fill:after { content:&quot;&quot;; display:block; clear:both; }');
+		//document.writeln('/* Wrapping width */');
+		document.writeln('.wrapping { width:'+wrapWidth+'; margin-left:auto; margin-right:auto; }');
+		//document.writeln('/* Wrapping align */');
+		document.writeln('.lefting .wrapping { margin-left:0; }');
+		document.writeln('.righting .wrapping { margin-right:0; }');
+		//document.writeln('/* Ming &amp; Ning &amp; Wing &amp; Ving &amp; Ding */');
+		document.writeln('.ming, .n1, .n2, .wing, .v1, .v2, .ding { position:relative; *zoom:1; }');
+		document.writeln('.ming:after, .n1:after, .n2:after, .wing:after, .v1:after, .v2:after, .ding:after { content:&quot;&quot;; display:block; clear:both; }');
+		//document.writeln('/* bHead li &amp; bFoot li */');
+		document.writeln('#bhead ul, #bfoot ul { position:relative; }');
+		document.writeln('#bhead li, #bfoot li { position:relative; float:left; list-style:none; }');
+		//document.writeln('/* Hybrid M */');
+		document.writeln('.m .ming {  }');
+		//document.writeln('/* Hybrid MN */');
+		document.writeln('.mn .filling { padding-right:'+sideWidth+'; }');
+		document.writeln('.mn .ming { float:left; width:100%; }');
+		document.writeln('.mn .n1, .mn .n2 { width:'+sideWidth+'; float:right; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; } /*add(.mn .n2)*/');
+		//document.writeln('/* Hybrid NM */');
+		document.writeln('.nm .filling { padding-left:'+sideWidth+'; }');
+		document.writeln('.nm .ming { float:right; width:100%; }');
+		document.writeln('.nm .n1, .nm .n2 { width:'+sideWidth+'; float:left; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; } /*add(.nm .n2)*/');
+		//document.writeln('/* Hybrid MNN */');
+		document.writeln('.mnn .filling { padding-right:'+sAndAsWidth+'; }');
+		document.writeln('.mnn .ming { float:left; width:100%; }');
+		document.writeln('.mnn .n1 { float:right; width:'+sideWidth+'; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; }');
+		document.writeln('.mnn .n2 { float:right; width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+sAndAsWidth+'; }');
+		//document.writeln('/* Hybrid NMN */');
+		document.writeln('.nmn .filling { padding-left:'+sideWidth+'; padding-right:'+asideWidth+'; }');
+		document.writeln('.nmn .ming { float:left; margin-right:-100%; width:100%; }');
+		document.writeln('.nmn .n1 { float:left; width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; }');
+		document.writeln('.nmn .n2 { float:right; width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+asideWidth+'; }');
+		//document.writeln('/* Hybrid NNM */');
+		document.writeln('.nnm .filling { padding-left:'+sAndAsWidth+'; }');
+		document.writeln('.nnm .ming { float:right; width:100%; }');
+		document.writeln('.nnm .n1 { float:left; width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sAndAsWidth+'; }');
+		document.writeln('.nnm .n2 { float:left; width:'+asideWidth+'; margin-right:-'+asideWidth+'; left:-'+asideWidth+'; }');
+		//document.writeln('/* Width */');
+		document.writeln('.wrapping .w-1     {  }');
+		document.writeln('.wrapping .w-1-2   { width:50%; }');
+		document.writeln('.wrapping .w-1-3   { width:33.33333%; }');
+		document.writeln('.wrapping .w-2-3   { width:66.66666%; }');
+		document.writeln('.wrapping .w-1-4   { width:25%; }');
+		document.writeln('.wrapping .w-3-4   { width:75%; }');
+		document.writeln('.wrapping .w-1-5   { width:20%; }');
+		document.writeln('.wrapping .w-2-5   { width:40%; }');
+		document.writeln('.wrapping .w-3-5   { width:60%; }');
+		document.writeln('.wrapping .w-4-5   { width:80%; }');
+		document.writeln('.wrapping .w-1-6   { width:16.656%; }');
+		document.writeln('.wrapping .w-5-6   { width:83.33%; }');
+		document.writeln('.wrapping .w-1-8   { width:12.5%; }');
+		document.writeln('.wrapping .w-3-8   { width:37.5%; }');
+		document.writeln('.wrapping .w-5-8   { width:62.5%; }');
+		document.writeln('.wrapping .w-7-8   { width:87.5%; }');
+		document.writeln('.wrapping .w-1-12  { width:8.3333%; }');
+		document.writeln('.wrapping .w-5-12  { width:41.6666%; }');
+		document.writeln('.wrapping .w-7-12  { width:58.3333%; }');
+		document.writeln('.wrapping .w-11-12 { width:91.6666%; }');
+		document.writeln('.wrapping .w-1-24  { width:4.1666%; }');
+		document.writeln('.wrapping .w-5-24  { width:20.8333%; }');
+		document.writeln('.wrapping .w-7-24  { width:29.1666%; }');
+		document.writeln('.wrapping .w-11-24 { width:45.8333%; }');
+		document.writeln('.wrapping .w-13-24 { width:54.1666%; }');
+		document.writeln('.wrapping .w-17-24 { width:70.8333%; }');
+		document.writeln('.wrapping .w-19-24 { width:79.1666%; }');
+		document.writeln('.wrapping .w-23-24 { width:95.8333%; }');
+		//document.writeln('/* X (Horizontal) */');
+		document.writeln('.xcn { clear:none; }');
+		document.writeln('.xcl { clear:left; }');
+		document.writeln('.xcr { clear:right; }');
+		document.writeln('.xcb { clear:both; }');
+		document.writeln('.xfn { float:none; }');
+		document.writeln('.xfl { float:left; }');
+		document.writeln('.xfr { float:right; }');
+		document.writeln('.xfc { margin-left:auto; margin-right:auto; }');
+		document.writeln('/* ######### ######### ######### END::Hybrid ######### ######### ######### */');
+	}
+}
+" Trigger="cssh" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Hybrid-Reset" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（无需单位）&quot;, &quot;240&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（无需单位）&quot;, &quot;240&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;外套的宽度（像素值、百分比或值“auto”，需要单位）&quot;, &quot;auto&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW;
+		var sAndAsWidth = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* ######### BEGIN::Hybrid Reset ######### */');
+		document.writeln('.wrapping { width:'+wrapWidth+'; }');
+		//document.writeln('/* Hybrid M */');
+		//document.writeln('/* Hybrid MN */');
+		document.writeln('.mn .filling { padding-right:'+sideWidth+'; }');
+		document.writeln('.mn .n1, .mn .n2 { width:'+sideWidth+'; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; } /*add(.mn .n2)*/');
+		//document.writeln('/* Hybrid NM */');
+		document.writeln('.nm .filling { padding-left:'+sideWidth+'; }');
+		document.writeln('.nm .n1, .nm .n2 { width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; } /*add(.nm .n2)*/');
+		//document.writeln('/* Hybrid MNN */');
+		document.writeln('.mnn .filling { padding-right:'+sAndAsWidth+'; }');
+		document.writeln('.mnn .n1 { width:'+sideWidth+'; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; }');
+		document.writeln('.mnn .n2 { width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+sAndAsWidth+'; }');
+		//document.writeln('/* Hybrid NMN */');
+		document.writeln('.nmn .filling { padding-left:'+sideWidth+'; padding-right:'+asideWidth+'; }');
+		document.writeln('.nmn .n1 { width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; }');
+		document.writeln('.nmn .n2 { width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+asideWidth+'; }');
+		//document.writeln('/* Hybrid NNM */');
+		document.writeln('.nnm .filling { padding-left:'+sAndAsWidth+'; }');
+		document.writeln('.nnm .n1 { width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sAndAsWidth+'; }');
+		document.writeln('.nnm .n2 { width:'+asideWidth+'; margin-right:-'+asideWidth+'; left:-'+asideWidth+'; }');
+		document.writeln('/* ######### END::Hybrid Reset ######### */');
+	}
+}
+" Trigger="csshreset" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Inner" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（不需单位）&quot;, &quot;200&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（不需单位）&quot;, &quot;200&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;无需设置，由外部布局决定&quot;, &quot;auto&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW;
+		var sAndAsWidth = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* ######### BEGIN::Inner Hybrid ######### */');
+		//document.writeln('/* Inner W */');
+		document.writeln('.w .wing {  }');
+		//document.writeln('/* Inner WV */');
+		document.writeln('.wv .fill { padding-right:'+sideWidth+'; }');
+		document.writeln('.wv .wing { float:left; width:100%; }');
+		document.writeln('.wv .v1, .wv .v2 { width:'+sideWidth+'; float:right; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; } /*add(.wv .v2)*/');
+		//document.writeln('/* Inner VW */');
+		document.writeln('.vw .fill { padding-left:'+sideWidth+'; }');
+		document.writeln('.vw .wing { float:right; width:100%; }');
+		document.writeln('.vw .v1, .vw .v2 { width:'+sideWidth+'; float:left; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; } /*add(.vw .v2)*/');
+		//document.writeln('/* Inner WVV */');
+		document.writeln('.wvv .fill { padding-right:'+sAndAsWidth+'; }');
+		document.writeln('.wvv .wing { float:left; width:100%; }');
+		document.writeln('.wvv .v1 { float:right; width:'+sideWidth+'; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; }');
+		document.writeln('.wvv .v2 { float:right; width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+sAndAsWidth+'; }');
+		//document.writeln('/* Inner VWV */');
+		document.writeln('.vwv .fill { padding-left:'+sideWidth+'; padding-right:'+asideWidth+'; }');
+		document.writeln('.vwv .wing { float:left; margin-right:-100%; width:100%; }');
+		document.writeln('.vwv .v1 { float:left; width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; }');
+		document.writeln('.vwv .v2 { float:right; width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+asideWidth+'; }');
+		//document.writeln('/* Inner VVW */');
+		document.writeln('.vvw .fill { padding-left:'+sAndAsWidth+'; }');
+		document.writeln('.vvw .wing { float:right; width:100%; }');
+		document.writeln('.vvw .v1 { float:left; width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sAndAsWidth+'; }');
+		document.writeln('.vvw .v2 { float:left; width:'+asideWidth+'; margin-right:-'+asideWidth+'; left:-'+asideWidth+'; }');
+		document.writeln('/* ######### END::Inner Hybrid ######### */');
+	}
+}
+" Trigger="cssin" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Inner-Reset" Flags="12" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="var sideW = prompt( &quot;主侧边的像素宽度（不需单位）&quot;, &quot;200&quot; );
+var asideW = prompt( &quot;副侧边的像素宽度（不需单位）&quot;, &quot;200&quot; );
+if( sideW &gt; 0 ){
+	var wrapW = prompt( &quot;无需设置，由外部布局决定&quot;, &quot;auto&quot; );
+	if( asideW &gt; 0 ){
+		var sideWidth   = sideW  + &quot;px&quot;;
+		var asideWidth  = asideW + &quot;px&quot;;
+		var wrapWidth   = wrapW;
+		var sAndAsWidth = parseInt(sideW) + parseInt(asideW) + &quot;px&quot;;
+		document.writeln('/* ######### BEGIN::Inner Hybrid Reset ######### */');
+		//document.writeln('/* Hybrid W */');
+		//document.writeln('/* Hybrid WV */');
+		document.writeln('.wv .fill { padding-right:'+sideWidth+'; }');
+		document.writeln('.wv .v1, .wv .v2 { width:'+sideWidth+'; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; } /*add(.wv .v2)*/');
+		//document.writeln('/* Hybrid VW */');
+		document.writeln('.vw .fill { padding-left:'+sideWidth+'; }');
+		document.writeln('.vw .v1, .vw .v2 { width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; } /*add(.vw .v2)*/');
+		//document.writeln('/* Hybrid WVV */');
+		document.writeln('.wvv .fill { padding-right:'+sAndAsWidth+'; }');
+		document.writeln('.wvv .v1 { width:'+sideWidth+'; margin-left:-'+sideWidth+'; right:-'+sideWidth+'; }');
+		document.writeln('.wvv .v2 { width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+sAndAsWidth+'; }');
+		//document.writeln('/* Hybrid VWV */');
+		document.writeln('.vwv .fill { padding-left:'+sideWidth+'; padding-right:'+asideWidth+'; }');
+		document.writeln('.vwv .v1 { width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sideWidth+'; }');
+		document.writeln('.vwv .v2 { width:'+asideWidth+'; margin-left:-'+asideWidth+'; right:-'+asideWidth+'; }');
+		//document.writeln('/* Hybrid VVW */');
+		document.writeln('.vvw .fill { padding-left:'+sAndAsWidth+'; }');
+		document.writeln('.vvw .v1 { width:'+sideWidth+'; margin-right:-'+sideWidth+'; left:-'+sAndAsWidth+'; }');
+		document.writeln('.vvw .v2 { width:'+asideWidth+'; margin-right:-'+asideWidth+'; left:-'+asideWidth+'; }');
+		document.writeln('/* ######### END::Inner Hybrid Reset ######### */');
+	}
+}
+" Trigger="cssinreset" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Responsive(480-)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="@media (max-width: 480px) {
+	.wrapping{ width:auto; }
+	.mn .filling, .nm .filling, .mnn .filling, .nmn .filling, .nnm .filling{ padding:0; }
+	.mn  .ming, .mn  .n1, .mn  .n2,
+	.nm  .ming, .nm  .n1, .nm  .n2,
+	.mnn .ming, .mnn .n1, .mnn .n2,
+	.nmn .ming, .nmn .n1, .nmn .n2,
+	.nnm .ming, .nnm .n1, .nnm .n2 {
+		width:auto; float:none; margin-left:0; margin-right:0; left:0; right:0; clear:both;
+	}
+	.wv .fill, .vw .fill, .wvv .fill, .vwv .fill, .vvw .fill{ padding:0; }
+	.wv  .wing, .wv  .v1, .wv  .v2,
+	.vw  .wing, .vw  .v1, .vw  .v2,
+	.wvv .wing, .wvv .v1, .wvv .v2,
+	.vwv .wing, .vwv .v1, .vwv .v2,
+	.vvw .wing, .nnm .v1, .vvw .v2 {
+		width:auto; float:none; margin-left:0; margin-right:0; left:0; right:0; clear:both;
+	}
+	.wrapping .w-1,    .wrapping .w-1-2,  .wrapping .w-1-3,  .wrapping .w-2-3,   .wrapping .w-1-4,   .wrapping .w-3-4,
+	.wrapping .w-1-5,  .wrapping .w-2-5,  .wrapping .w-3-5,  .wrapping .w-4-5,
+	.wrapping .w-1-6,  .wrapping .w-5-6,  .wrapping .w-1-8,  .wrapping .w-3-8,   .wrapping .w-5-8,   .wrapping .w-7-8,
+	.wrapping .w-1-12, .wrapping .w-5-12, .wrapping .w-7-12, .wrapping .w-11-12,
+	.wrapping .w-1-24, .wrapping .w-5-24, .wrapping .w-7-24, .wrapping .w-11-24, .wrapping .w-13-24, .wrapping .w-17-24, .wrapping .w-19-24, .wrapping .w-23-24 {
+		width:auto; float:none;
+	}
+}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="CSS-Responsive(760-)" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="@media (max-width: 768px) {
+	.wv .fill, .vw .fill, .wvv .fill, .vwv .fill, .vvw .fill{ padding:0; }
+	.wv  .wing, .wv  .v1, .wv  .v2,
+	.vw  .wing, .vw  .v1, .vw  .v2,
+	.wvv .wing, .wvv .v1, .wvv .v2,
+	.vwv .wing, .vwv .v1, .vwv .v2,
+	.vvw .wing, .nnm .v1, .vvw .v2 {
+		width:auto; float:none; margin-left:0; margin-right:0; left:0; right:0; clear:both;
+	}
+}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Customer Center" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;div id=&quot;customer-center&quot;&gt;
+&lt;h3&gt;0951-5171019&lt;/h3&gt;
+&lt;a target=&quot;_blank&quot; href=&quot;http://wpa.qq.com/msgrd?v=3&amp;uin=11552698&amp;site=qq&amp;menu=yes&quot;&gt;
+	&lt;img border=&quot;0&quot; src=&quot;http://wpa.qq.com/pa?p=2:11552698:47&quot; alt=&quot;点击这里给我发消息&quot; title=&quot;点击这里给我发消息&quot;&gt;
+&lt;/a&gt;&lt;br /&gt;
+MON-FRI: AM 9:00 ~ PM 18:00&lt;br /&gt;
+SAT: AM 9:00 ~ PM 13:00&lt;br /&gt;
+SUN/Holiday: CLOSE
+&lt;/div&gt;
+	&lt;ul class=&quot;list&quot;&gt; 
+		&lt;li&gt; 
+			&lt;font class=&quot;green&quot;&gt;国名银行&lt;/font&gt;&lt;BR&gt; 
+			&lt;font class=&quot;number&quot;&gt;123-456-7890123&lt;/font&gt; 
+		&lt;/li&gt; 
+		&lt;li&gt; 
+			&lt;font class=&quot;green&quot;&gt;国名银行&lt;/font&gt;&lt;BR&gt; 
+			&lt;font class=&quot;number&quot;&gt;123-456-7890123&lt;/font&gt; 
+		&lt;/li&gt; 
+		&lt;li class=&quot;non&quot;&gt;[ 예금주 : 홍길동 ]&lt;/li&gt; 
+	&lt;/ul&gt;" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Ding" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="${1:.ding} { position:relative; *zoom:1; }
+${1:.ding}:after { content:&quot;&quot;; display:block; clear:both; }" Trigger="ding" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="Foot Quick" Flags="2" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\DWT\HTML\PHP\" Text="&lt;div&gt;
+&lt;a href=&quot;/&quot;&gt;&lt;img src=&quot;/shopuser/btn_img/bbtn_home.gif&quot;&gt;&lt;/a&gt; 
+&lt;a href=&quot;javascript:history.back();&quot;&gt;&lt;img src=&quot;/shopuser/btn_img/bbtn_back.gif&quot;&gt;&lt;/a&gt; 
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;/shopuser/btn_img/bbtn_top.gif&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;" Trigger="Foot " Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="meta" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;meta name=&quot;author&quot; content=&quot;bubujie@gmail.com&quot; /&gt;
+&lt;meta name=&quot;copyright&quot; content=&quot;Copyright Statement&quot; /&gt;
+&lt;meta name=&quot;generator&quot; content=&quot;EmEditor&quot; /&gt;
+&lt;meta name=&quot;created&quot; content=&quot;${Date} ${Time}&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;" Trigger="meta" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="nnmnn:auto" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text=".wrapping{ width:auto; }
+.mn  .ming, .mn  .n1, .mn  .n2,
+.nm  .ming, .nm  .n1, .nm  .n2,
+.mnn .ming, .mnn .n1, .mnn .n2,
+.nmn .ming, .nmn .n1, .nmn .n2,
+.nnm .ming, .nnm .n1, .nnm .n2 {
+	width:auto; float:none; margin:0; left:0; right:0; clear:both;
+}
+.mn  #com-main, .mn  #com-side, .mn  #com-aside,
+.nm  #com-main, .nm  #com-side, .nm  #com-aside,
+.mnn #com-main, .mnn #com-side, .mnn #com-aside,
+.nmn #com-main, .nmn #com-side, .nmn #com-aside,
+.nnm #com-main, .nnm #com-side, .nnm #com-aside {
+	width:auto; float:none; margin:0; left:0; right:0; clear:both;
+}" Trigger="tudingauto" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="png24_bg" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text=".selector{background:url(png24.png); _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='png24.png', sizingMethod='crop');}" Trigger="png24" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="prettyprint" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+${0:${TM_SELECTED_TEXT}}
+&lt;/pre&gt;" Trigger="prettyprint" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+		<Item Name="w-(a/b):auto" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text=".wrapping .w-1,    .wrapping .w-1-2,  .wrapping .w-1-3,  .wrapping .w-2-3,   .wrapping .w-1-4,   .wrapping .w-3-4,
+.wrapping .w-1-5,  .wrapping .w-2-5,  .wrapping .w-3-5,  .wrapping .w-4-5,
+.wrapping .w-1-6,  .wrapping .w-5-6,  .wrapping .w-1-8,  .wrapping .w-3-8,   .wrapping .w-5-8,   .wrapping .w-7-8,
+.wrapping .w-1-12, .wrapping .w-5-12, .wrapping .w-7-12, .wrapping .w-11-12,
+.wrapping .w-1-24, .wrapping .w-5-24, .wrapping .w-7-24, .wrapping .w-11-24, .wrapping .w-13-24, .wrapping .w-17-24, .wrapping .w-19-24, .wrapping .w-23-24 {
+	width:auto; float:none;
+}" Trigger="widthauto" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+	</Folder>
+</SnippetTree>
+</Snippets>

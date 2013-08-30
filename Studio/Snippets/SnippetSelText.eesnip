@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Item Name="SnippetSelText" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="\" Text="\${TM_SELECTED_TEXT${1::${0:默认文本}}}" Trigger="seltext" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+</SnippetTree>
+</Snippets>

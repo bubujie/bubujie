@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Item Name="ShellTable" Flags="4" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="`# var nRows = &quot;${表格行数}&quot;; var nCols = &quot;${表格列数}&quot;;
+if( nRows &gt; 0 ){
+	if( nCols &gt; 0 ){
+		Interface.writeln( &quot;&lt;table&gt;&quot; );
+		for( r = 0; r != nRows; r++ ){
+			Interface.writeln( &quot;  &lt;tr&gt;&quot; );
+			for( c = 0; c != nCols; c++ ){
+				Interface.writeln( &quot;    &lt;td&gt;&lt;/td&gt;&quot; );
+			}
+			Interface.writeln( &quot;  &lt;/tr&gt;&quot; );
+		}
+		Interface.writeln( &quot;&lt;/table&gt;&quot; );
+		
+	}
+}
+`" Trigger="Shell" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+</SnippetTree>
+</Snippets>

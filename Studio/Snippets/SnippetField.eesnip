@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!--EmEditor Snippets file-->
+<Snippets>
+<SnippetTree>
+	<Item Name="SnippetField" Flags="0" ConfigEdit="" ConfigMacro="" ConfigsAssociate="" Text="\${${1:0}${2::${3:${TM_SELECTED_TEXT:默认文本}}}}" Trigger="" Tip="" ShortcutKey="0" ShortcutVirt="0"/>
+</SnippetTree>
+</Snippets>
